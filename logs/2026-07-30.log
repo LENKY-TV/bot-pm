@@ -1,0 +1,1802 @@
+[2026-07-30T00:02:29.479Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T00:02:29.483Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T00:02:29.485Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T00:02:29.486Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T00:02:29.489Z] [INFO] Événement chargé: clientReady
+[2026-07-30T00:02:29.493Z] [INFO] Commande chargée: /add
+[2026-07-30T00:02:29.495Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T00:02:29.497Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T00:02:29.498Z] [INFO] Commande chargée: /help
+[2026-07-30T00:02:29.499Z] [INFO] Commande chargée: /panel
+[2026-07-30T00:02:29.501Z] [INFO] Commande chargée: /priority
+[2026-07-30T00:02:29.503Z] [INFO] Commande chargée: /remove
+[2026-07-30T00:02:29.504Z] [INFO] Commande chargée: /rename
+[2026-07-30T00:02:29.506Z] [INFO] Commande chargée: /reopen
+[2026-07-30T00:02:29.508Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T00:02:29.510Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T00:02:29.511Z] [INFO] Commande chargée: /rio
+[2026-07-30T00:02:29.512Z] [INFO] Commande chargée: /search
+[2026-07-30T00:02:29.513Z] [INFO] Commande chargée: /service
+[2026-07-30T00:02:29.514Z] [INFO] Commande chargée: /stats
+[2026-07-30T00:02:29.515Z] [INFO] Déploiement de 15 commandes...
+[2026-07-30T00:02:29.772Z] [INFO] 15 commandes déployées avec succès
+[2026-07-30T00:02:29.775Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T00:02:29.776Z] [INFO] Bouton chargé: config_color
+[2026-07-30T00:02:29.778Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T00:02:29.780Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T00:02:29.781Z] [INFO] Bouton chargé: config_image
+[2026-07-30T00:02:29.782Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T00:02:29.783Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T00:02:29.784Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T00:02:29.785Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T00:02:29.786Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T00:02:29.788Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T00:02:29.789Z] [INFO] Bouton chargé: config_title
+[2026-07-30T00:02:29.790Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T00:02:29.791Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T00:02:29.793Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T00:02:29.794Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T00:02:29.795Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T00:02:29.796Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T00:02:29.797Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T00:02:29.798Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T00:02:29.799Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T00:02:29.800Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T00:02:29.801Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T00:02:29.803Z] [INFO] Bouton chargé: service_create
+[2026-07-30T00:02:29.804Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T00:02:29.805Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T00:02:29.807Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T00:02:29.809Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T00:02:29.811Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T00:02:29.812Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T00:02:29.813Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T00:02:29.815Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T00:02:29.816Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T00:02:29.817Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T00:02:29.818Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T00:02:29.820Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T00:02:29.821Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T00:02:29.822Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T00:02:29.823Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T00:02:29.825Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T00:02:29.826Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T00:02:29.828Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T00:02:29.829Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T00:02:29.830Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T00:02:29.832Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T00:02:29.832Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T00:02:29.833Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T00:02:29.834Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T00:02:29.835Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T00:02:29.835Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T00:02:29.836Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T00:02:29.837Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T00:02:29.838Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T00:02:29.839Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T00:02:29.839Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T00:02:29.840Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T00:02:29.842Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T00:02:29.843Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T00:02:29.844Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T00:02:29.845Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T00:02:29.846Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T00:02:29.847Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T00:02:29.848Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T00:02:30.582Z] [INFO] Scheduler démarré
+[2026-07-30T00:02:30.583Z] [INFO] Bot démarré avec succès !
+[2026-07-30T00:02:30.696Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T00:02:30.697Z] [INFO] Serveurs: 1
+[2026-07-30T00:02:30.697Z] [INFO] Utilisateurs: 48
+[2026-07-30T00:02:30.702Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T00:02:30.752Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T00:02:40.963Z] [INFO] Dispatch envoyé dans #🪧・dispatch par lenky.ytb
+[2026-07-30T00:02:46.602Z] [INFO] lenky.ytb marqué présent au dispatch
+[2026-07-30T00:02:49.719Z] [INFO] lenky.ytb marqué présent au dispatch
+[2026-07-30T00:02:51.804Z] [INFO] lenky.ytb marqué en retard au dispatch
+[2026-07-30T08:05:44.522Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T08:05:44.529Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T08:05:44.533Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T08:05:44.536Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T08:05:44.539Z] [INFO] Événement chargé: clientReady
+[2026-07-30T08:05:44.546Z] [INFO] Commande chargée: /add
+[2026-07-30T08:05:44.548Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T08:05:44.552Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T08:05:44.555Z] [INFO] Commande chargée: /help
+[2026-07-30T08:05:44.557Z] [INFO] Commande chargée: /panel
+[2026-07-30T08:05:44.560Z] [INFO] Commande chargée: /priority
+[2026-07-30T08:05:44.562Z] [INFO] Commande chargée: /remove
+[2026-07-30T08:05:44.564Z] [INFO] Commande chargée: /rename
+[2026-07-30T08:05:44.567Z] [INFO] Commande chargée: /reopen
+[2026-07-30T08:05:44.570Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T08:05:44.572Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T08:05:44.573Z] [INFO] Commande chargée: /rio
+[2026-07-30T08:05:44.576Z] [INFO] Commande chargée: /search
+[2026-07-30T08:05:44.578Z] [INFO] Commande chargée: /service
+[2026-07-30T08:05:44.580Z] [INFO] Commande chargée: /stats
+[2026-07-30T08:05:44.581Z] [INFO] Déploiement de 15 commandes...
+[2026-07-30T08:05:44.911Z] [INFO] 15 commandes déployées avec succès
+[2026-07-30T08:05:44.915Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T08:05:44.918Z] [INFO] Bouton chargé: config_color
+[2026-07-30T08:05:44.921Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T08:05:44.923Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T08:05:44.926Z] [INFO] Bouton chargé: config_image
+[2026-07-30T08:05:44.928Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T08:05:44.930Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T08:05:44.932Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T08:05:44.934Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T08:05:44.936Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T08:05:44.938Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T08:05:44.941Z] [INFO] Bouton chargé: config_title
+[2026-07-30T08:05:44.943Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T08:05:44.945Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T08:05:44.947Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T08:05:44.949Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T08:05:44.950Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T08:05:44.953Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T08:05:44.956Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T08:05:44.958Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T08:05:44.960Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T08:05:44.962Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T08:05:44.964Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T08:05:44.966Z] [INFO] Bouton chargé: service_create
+[2026-07-30T08:05:44.969Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T08:05:44.971Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T08:05:44.974Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T08:05:44.976Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T08:05:44.980Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T08:05:44.983Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T08:05:44.986Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T08:05:44.988Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T08:05:44.990Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T08:05:44.993Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T08:05:44.996Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T08:05:44.997Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T08:05:44.999Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T08:05:45.001Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T08:05:45.003Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T08:05:45.006Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T08:05:45.008Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T08:05:45.011Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T08:05:45.013Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T08:05:45.015Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T08:05:45.019Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T08:05:45.020Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T08:05:45.022Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T08:05:45.023Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T08:05:45.026Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T08:05:45.028Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T08:05:45.029Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T08:05:45.031Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T08:05:45.032Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T08:05:45.034Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T08:05:45.036Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T08:05:45.037Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T08:05:45.039Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T08:05:45.040Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T08:05:45.042Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T08:05:45.045Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T08:05:45.046Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T08:05:45.048Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T08:05:45.050Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T08:05:45.965Z] [INFO] Scheduler démarré
+[2026-07-30T08:05:45.966Z] [INFO] Bot démarré avec succès !
+[2026-07-30T08:05:46.115Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T08:05:46.116Z] [INFO] Serveurs: 1
+[2026-07-30T08:05:46.116Z] [INFO] Utilisateurs: 49
+[2026-07-30T08:05:46.126Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T08:05:46.199Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T08:30:47.020Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T08:30:47.023Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T08:30:47.026Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T08:30:47.027Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T08:30:47.028Z] [INFO] Événement chargé: clientReady
+[2026-07-30T08:30:47.033Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T08:30:47.035Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T08:30:47.037Z] [INFO] Commande chargée: /rename
+[2026-07-30T08:30:47.039Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T08:30:47.040Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T08:30:47.041Z] [INFO] Commande chargée: /rio
+[2026-07-30T08:30:47.043Z] [INFO] Commande chargée: /service
+[2026-07-30T08:30:47.043Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T08:30:47.287Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T08:30:47.289Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T08:30:47.291Z] [INFO] Bouton chargé: config_color
+[2026-07-30T08:30:47.292Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T08:30:47.294Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T08:30:47.295Z] [INFO] Bouton chargé: config_image
+[2026-07-30T08:30:47.296Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T08:30:47.297Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T08:30:47.298Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T08:30:47.299Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T08:30:47.300Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T08:30:47.302Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T08:30:47.303Z] [INFO] Bouton chargé: config_title
+[2026-07-30T08:30:47.304Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T08:30:47.305Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T08:30:47.306Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T08:30:47.306Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T08:30:47.307Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T08:30:47.309Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T08:30:47.310Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T08:30:47.311Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T08:30:47.312Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T08:30:47.313Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T08:30:47.314Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T08:30:47.315Z] [INFO] Bouton chargé: service_create
+[2026-07-30T08:30:47.315Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T08:30:47.317Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T08:30:47.319Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T08:30:47.321Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T08:30:47.323Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T08:30:47.324Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T08:30:47.325Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T08:30:47.326Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T08:30:47.327Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T08:30:47.329Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T08:30:47.330Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T08:30:47.331Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T08:30:47.332Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T08:30:47.333Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T08:30:47.334Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T08:30:47.336Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T08:30:47.337Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T08:30:47.338Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T08:30:47.340Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T08:30:47.341Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T08:30:47.342Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T08:30:47.343Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T08:30:47.344Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T08:30:47.345Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T08:30:47.346Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T08:30:47.346Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T08:30:47.347Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T08:30:47.348Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T08:30:47.348Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T08:30:47.349Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T08:30:47.350Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T08:30:47.351Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T08:30:47.352Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T08:30:47.353Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T08:30:47.353Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T08:30:47.355Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T08:30:47.356Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T08:30:47.356Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T08:30:47.357Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T08:30:48.108Z] [INFO] Scheduler démarré
+[2026-07-30T08:30:48.109Z] [INFO] Bot démarré avec succès !
+[2026-07-30T08:30:48.213Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T08:30:48.214Z] [INFO] Serveurs: 1
+[2026-07-30T08:30:48.214Z] [INFO] Utilisateurs: 49
+[2026-07-30T08:30:48.219Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T08:30:48.266Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T08:31:33.605Z] [INFO] Panneau déployé dans #📃・ᴛɪᴄᴋᴇᴛ par lenky.ytb
+[2026-07-30T08:32:26.137Z] [INFO] Dispatch envoyé dans #🪧・dispatch par lenky.ytb
+[2026-07-30T08:32:59.007Z] [ERROR] Erreur dans la commande /service | Error: Received one or more errors
+    at _ObjectValidator.handleIgnoreStrategy (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:2136:70)
+    at _ObjectValidator.handleStrategy (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:1983:47)
+    at _ObjectValidator.handle (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:2089:17)
+    at _ObjectValidator.parse (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:972:90)
+    at EmbedBuilder.setFooter (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\builders\dist\index.js:350:26)
+    at EmbedUtils.create (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\utils\embedBuilder.js:43:15)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\service.js:15:34)
+    at CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:27)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:41)
+    at Client.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\eventHandler.js:29:63)
+[2026-07-30T08:50:31.863Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T08:50:31.867Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T08:50:31.869Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T08:50:31.870Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T08:50:31.872Z] [INFO] Événement chargé: clientReady
+[2026-07-30T08:50:31.875Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T08:50:31.878Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T08:50:31.880Z] [INFO] Commande chargée: /rename
+[2026-07-30T08:50:31.881Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T08:50:31.883Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T08:50:31.884Z] [INFO] Commande chargée: /rio
+[2026-07-30T08:50:31.885Z] [INFO] Commande chargée: /service
+[2026-07-30T08:50:31.886Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T08:50:32.167Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T08:50:32.170Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T08:50:32.171Z] [INFO] Bouton chargé: config_color
+[2026-07-30T08:50:32.174Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T08:50:32.175Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T08:50:32.177Z] [INFO] Bouton chargé: config_image
+[2026-07-30T08:50:32.178Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T08:50:32.178Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T08:50:32.179Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T08:50:32.180Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T08:50:32.181Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T08:50:32.183Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T08:50:32.184Z] [INFO] Bouton chargé: config_title
+[2026-07-30T08:50:32.185Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T08:50:32.186Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T08:50:32.187Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T08:50:32.188Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T08:50:32.189Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T08:50:32.190Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T08:50:32.191Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T08:50:32.192Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T08:50:32.193Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T08:50:32.194Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T08:50:32.195Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T08:50:32.196Z] [INFO] Bouton chargé: service_create
+[2026-07-30T08:50:32.197Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T08:50:32.198Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T08:50:32.199Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T08:50:32.201Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T08:50:32.203Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T08:50:32.204Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T08:50:32.205Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T08:50:32.206Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T08:50:32.208Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T08:50:32.209Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T08:50:32.210Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T08:50:32.211Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T08:50:32.212Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T08:50:32.213Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T08:50:32.214Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T08:50:32.216Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T08:50:32.217Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T08:50:32.218Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T08:50:32.219Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T08:50:32.221Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T08:50:32.222Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T08:50:32.223Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T08:50:32.224Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T08:50:32.225Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T08:50:32.226Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T08:50:32.227Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T08:50:32.227Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T08:50:32.228Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T08:50:32.229Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T08:50:32.230Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T08:50:32.231Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T08:50:32.232Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T08:50:32.233Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T08:50:32.234Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T08:50:32.235Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T08:50:32.236Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T08:50:32.237Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T08:50:32.238Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T08:50:32.239Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T08:50:32.937Z] [INFO] Scheduler démarré
+[2026-07-30T08:50:32.937Z] [INFO] Bot démarré avec succès !
+[2026-07-30T08:50:33.081Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T08:50:33.082Z] [INFO] Serveurs: 1
+[2026-07-30T08:50:33.082Z] [INFO] Utilisateurs: 49
+[2026-07-30T08:50:33.087Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T08:50:33.134Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T08:55:45.899Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T08:55:45.903Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T08:55:45.905Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T08:55:45.906Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T08:55:45.908Z] [INFO] Événement chargé: clientReady
+[2026-07-30T08:55:45.912Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T08:55:45.915Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T08:55:45.916Z] [INFO] Commande chargée: /rename
+[2026-07-30T08:55:45.919Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T08:55:45.921Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T08:55:45.922Z] [INFO] Commande chargée: /rio
+[2026-07-30T08:55:45.924Z] [INFO] Commande chargée: /service
+[2026-07-30T08:55:45.924Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T08:55:46.190Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T08:55:46.193Z] [ERROR] Erreur lors du démarrage du bot | Error: Cannot find module '../../models/Service'
+Require stack:
+- C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_clockin.js
+- C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\buttonHandler.js
+- C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+    at Module._load (node:internal/modules/cjs/loader:1262:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1576:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_clockin.js:2:22)
+    at Module._compile (node:internal/modules/cjs/loader:1830:14)
+[2026-07-30T08:57:03.463Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T08:57:03.466Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T08:57:03.469Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T08:57:03.470Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T08:57:03.472Z] [INFO] Événement chargé: clientReady
+[2026-07-30T08:57:03.477Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T08:57:03.479Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T08:57:03.481Z] [INFO] Commande chargée: /rename
+[2026-07-30T08:57:03.483Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T08:57:03.484Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T08:57:03.485Z] [INFO] Commande chargée: /rio
+[2026-07-30T08:57:03.487Z] [INFO] Commande chargée: /service
+[2026-07-30T08:57:03.487Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T08:57:03.731Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T08:57:03.733Z] [INFO] Bouton chargé: attendance_clockin
+[2026-07-30T08:57:03.734Z] [INFO] Bouton chargé: attendance_clockout
+[2026-07-30T08:57:03.735Z] [INFO] Bouton chargé: attendance_stats
+[2026-07-30T08:57:03.737Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T08:57:03.739Z] [INFO] Bouton chargé: config_color
+[2026-07-30T08:57:03.740Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T08:57:03.741Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T08:57:03.743Z] [INFO] Bouton chargé: config_image
+[2026-07-30T08:57:03.744Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T08:57:03.746Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T08:57:03.747Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T08:57:03.748Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T08:57:03.749Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T08:57:03.750Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T08:57:03.751Z] [INFO] Bouton chargé: config_title
+[2026-07-30T08:57:03.753Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T08:57:03.754Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T08:57:03.755Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T08:57:03.756Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T08:57:03.757Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T08:57:03.758Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T08:57:03.759Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T08:57:03.760Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T08:57:03.761Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T08:57:03.761Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T08:57:03.762Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T08:57:03.764Z] [INFO] Bouton chargé: service_create
+[2026-07-30T08:57:03.765Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T08:57:03.766Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T08:57:03.768Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T08:57:03.769Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T08:57:03.772Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T08:57:03.774Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T08:57:03.775Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T08:57:03.776Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T08:57:03.777Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T08:57:03.778Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T08:57:03.779Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T08:57:03.781Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T08:57:03.781Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T08:57:03.783Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T08:57:03.784Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T08:57:03.785Z] [INFO] Select Menu chargé: attendance_clockin_select
+[2026-07-30T08:57:03.786Z] [INFO] Select Menu chargé: attendance_clockout_select
+[2026-07-30T08:57:03.787Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T08:57:03.788Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T08:57:03.790Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T08:57:03.791Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T08:57:03.792Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T08:57:03.794Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T08:57:03.795Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T08:57:03.796Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T08:57:03.797Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T08:57:03.798Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T08:57:03.799Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T08:57:03.800Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T08:57:03.800Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T08:57:03.801Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T08:57:03.802Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T08:57:03.803Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T08:57:03.804Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T08:57:03.806Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T08:57:03.807Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T08:57:03.808Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T08:57:03.809Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T08:57:03.810Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T08:57:03.811Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T08:57:03.812Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T08:57:04.497Z] [INFO] Scheduler démarré
+[2026-07-30T08:57:04.498Z] [INFO] Bot démarré avec succès !
+[2026-07-30T08:57:04.603Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T08:57:04.603Z] [INFO] Serveurs: 1
+[2026-07-30T08:57:04.604Z] [INFO] Utilisateurs: 49
+[2026-07-30T08:57:04.610Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T08:57:04.663Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:02:09.274Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:02:09.278Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:02:09.280Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:02:09.281Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:02:09.283Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:02:09.287Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:02:09.289Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:02:09.292Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:02:09.294Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:02:09.295Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:02:09.296Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:02:09.298Z] [INFO] Commande chargée: /service
+[2026-07-30T09:02:09.299Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:02:09.588Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:02:09.590Z] [INFO] Bouton chargé: attendance_refresh
+[2026-07-30T09:02:09.593Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:02:09.594Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:02:09.596Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:02:09.597Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:02:09.598Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:02:09.599Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:02:09.601Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:02:09.602Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:02:09.603Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:02:09.604Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:02:09.605Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:02:09.607Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:02:09.609Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:02:09.610Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:02:09.611Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:02:09.612Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:02:09.613Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:02:09.615Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:02:09.616Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:02:09.617Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:02:09.618Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:02:09.619Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:02:09.620Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:02:09.621Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:02:09.622Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:02:09.624Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:02:09.626Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:02:09.628Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:02:09.630Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:02:09.631Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:02:09.632Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:02:09.634Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:02:09.635Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:02:09.636Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:02:09.638Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:02:09.639Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:02:09.640Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:02:09.642Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:02:09.644Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:02:09.646Z] [INFO] Select Menu chargé: attendance_select
+[2026-07-30T09:02:09.647Z] [INFO] Select Menu chargé: attendance_select_service_start
+[2026-07-30T09:02:09.648Z] [INFO] Select Menu chargé: attendance_select_service_stop
+[2026-07-30T09:02:09.650Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:02:09.651Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:02:09.652Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:02:09.654Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:02:09.655Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:02:09.657Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:02:09.658Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:02:09.659Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:02:09.660Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:02:09.661Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:02:09.662Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:02:09.663Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:02:09.664Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:02:09.665Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:02:09.666Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:02:09.666Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:02:09.667Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:02:09.669Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:02:09.670Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:02:09.670Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:02:09.672Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:02:09.673Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:02:09.675Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:02:09.676Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:02:10.466Z] [INFO] Scheduler démarré
+[2026-07-30T09:02:10.467Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:02:10.577Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:02:10.578Z] [INFO] Serveurs: 1
+[2026-07-30T09:02:10.578Z] [INFO] Utilisateurs: 49
+[2026-07-30T09:02:10.583Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:02:10.638Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:06:51.560Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:06:51.564Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:06:51.566Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:06:51.567Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:06:51.569Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:06:51.573Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:06:51.575Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:06:51.577Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:06:51.579Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:06:51.581Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:06:51.582Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:06:51.584Z] [INFO] Commande chargée: /service
+[2026-07-30T09:06:51.584Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:06:51.833Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:06:51.836Z] [INFO] Bouton chargé: attendance_refresh
+[2026-07-30T09:06:51.838Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:06:51.840Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:06:51.842Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:06:51.843Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:06:51.845Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:06:51.846Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:06:51.847Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:06:51.848Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:06:51.849Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:06:51.851Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:06:51.852Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:06:51.853Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:06:51.855Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:06:51.856Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:06:51.857Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:06:51.858Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:06:51.858Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:06:51.860Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:06:51.861Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:06:51.862Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:06:51.863Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:06:51.864Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:06:51.865Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:06:51.866Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:06:51.867Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:06:51.868Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:06:51.871Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:06:51.873Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:06:51.875Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:06:51.876Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:06:51.877Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:06:51.879Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:06:51.880Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:06:51.881Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:06:51.882Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:06:51.883Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:06:51.884Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:06:51.885Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:06:51.887Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:06:51.889Z] [INFO] Select Menu chargé: attendance_select
+[2026-07-30T09:06:51.890Z] [INFO] Select Menu chargé: attendance_select_service_start
+[2026-07-30T09:06:51.891Z] [INFO] Select Menu chargé: attendance_select_service_stop
+[2026-07-30T09:06:51.893Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:06:51.894Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:06:51.896Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:06:51.897Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:06:51.898Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:06:51.900Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:06:51.901Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:06:51.901Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:06:51.902Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:06:51.904Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:06:51.905Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:06:51.905Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:06:51.906Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:06:51.907Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:06:51.908Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:06:51.909Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:06:51.910Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:06:51.911Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:06:51.912Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:06:51.913Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:06:51.915Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:06:51.916Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:06:51.916Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:06:51.917Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:06:52.766Z] [INFO] Scheduler démarré
+[2026-07-30T09:06:52.767Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:06:52.986Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:06:52.986Z] [INFO] Serveurs: 1
+[2026-07-30T09:06:52.987Z] [INFO] Utilisateurs: 49
+[2026-07-30T09:06:52.992Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:06:53.045Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:10:14.522Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:10:14.525Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:10:14.528Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:10:14.530Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:10:14.532Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:10:14.535Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:10:14.538Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:10:14.540Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:10:14.542Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:10:14.544Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:10:14.546Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:10:14.548Z] [INFO] Commande chargée: /service
+[2026-07-30T09:10:14.549Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:10:14.836Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:10:14.840Z] [INFO] Bouton chargé: attendance_refresh
+[2026-07-30T09:10:14.841Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:10:14.843Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:10:14.847Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:10:14.849Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:10:14.850Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:10:14.852Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:10:14.853Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:10:14.854Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:10:14.856Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:10:14.857Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:10:14.858Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:10:14.859Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:10:14.860Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:10:14.861Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:10:14.863Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:10:14.864Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:10:14.865Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:10:14.867Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:10:14.868Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:10:14.869Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:10:14.870Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:10:14.871Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:10:14.872Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:10:14.873Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:10:14.875Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:10:14.876Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:10:14.878Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:10:14.880Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:10:14.882Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:10:14.884Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:10:14.885Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:10:14.886Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:10:14.887Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:10:14.888Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:10:14.890Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:10:14.891Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:10:14.892Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:10:14.894Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:10:14.895Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:10:14.897Z] [INFO] Select Menu chargé: attendance_select
+[2026-07-30T09:10:14.898Z] [INFO] Select Menu chargé: attendance_select_service_start
+[2026-07-30T09:10:14.899Z] [INFO] Select Menu chargé: attendance_select_service_stop
+[2026-07-30T09:10:14.901Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:10:14.902Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:10:14.903Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:10:14.906Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:10:14.908Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:10:14.909Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:10:14.910Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:10:14.911Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:10:14.912Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:10:14.913Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:10:14.914Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:10:14.915Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:10:14.916Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:10:14.917Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:10:14.918Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:10:14.919Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:10:14.920Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:10:14.921Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:10:14.922Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:10:14.924Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:10:14.925Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:10:14.926Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:10:14.927Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:10:14.928Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:10:15.628Z] [INFO] Scheduler démarré
+[2026-07-30T09:10:15.629Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:10:15.750Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:10:15.751Z] [INFO] Serveurs: 1
+[2026-07-30T09:10:15.751Z] [INFO] Utilisateurs: 49
+[2026-07-30T09:10:15.757Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:10:15.815Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:16:05.196Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:16:05.200Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:16:05.202Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:16:05.203Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:16:05.205Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:16:05.209Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:16:05.211Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:16:05.213Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:16:05.215Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:16:05.216Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:16:05.217Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:16:05.219Z] [INFO] Commande chargée: /service
+[2026-07-30T09:16:05.220Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:16:05.510Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:16:05.512Z] [ERROR] Erreur lors du démarrage du bot | Error: Cannot find module '../../models/Attendance'
+Require stack:
+- C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_btn_pause.js
+- C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\buttonHandler.js
+- C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1476:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1049:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1073:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1094:12)
+    at Module._load (node:internal/modules/cjs/loader:1262:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1576:12)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_btn_pause.js:2:25)
+    at Module._compile (node:internal/modules/cjs/loader:1830:14)
+[2026-07-30T09:17:21.770Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:17:21.774Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:17:21.776Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:17:21.777Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:17:21.779Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:17:21.783Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:17:21.785Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:17:21.786Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:17:21.788Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:17:21.789Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:17:21.791Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:17:21.792Z] [INFO] Commande chargée: /service
+[2026-07-30T09:17:21.793Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:17:22.046Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:17:22.048Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T09:17:22.050Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T09:17:22.051Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T09:17:22.053Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:17:22.054Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:17:22.056Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:17:22.057Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:17:22.058Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:17:22.059Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:17:22.060Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:17:22.061Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:17:22.062Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:17:22.063Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:17:22.064Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:17:22.065Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:17:22.066Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:17:22.067Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:17:22.068Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:17:22.069Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:17:22.070Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:17:22.071Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:17:22.072Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:17:22.073Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:17:22.074Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:17:22.075Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:17:22.076Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:17:22.077Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:17:22.078Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:17:22.079Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:17:22.081Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:17:22.082Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:17:22.084Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:17:22.085Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:17:22.087Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:17:22.088Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:17:22.089Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:17:22.090Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:17:22.091Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:17:22.092Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:17:22.093Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:17:22.094Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:17:22.095Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:17:22.096Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:17:22.097Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:17:22.099Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:17:22.100Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:17:22.101Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:17:22.103Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:17:22.104Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:17:22.105Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:17:22.106Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:17:22.106Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:17:22.107Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:17:22.108Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:17:22.109Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:17:22.110Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:17:22.110Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:17:22.111Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:17:22.112Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:17:22.113Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:17:22.114Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:17:22.115Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:17:22.116Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:17:22.117Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:17:22.118Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:17:22.119Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:17:22.836Z] [INFO] Scheduler démarré
+[2026-07-30T09:17:22.837Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:17:22.956Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:17:22.956Z] [INFO] Serveurs: 1
+[2026-07-30T09:17:22.957Z] [INFO] Utilisateurs: 49
+[2026-07-30T09:17:22.962Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:17:23.020Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:18:23.638Z] [ERROR] Erreur dans le bouton attendance_btn_stop | Error: UNIQUE constraint failed: service_attendance.guild_id, service_attendance.user_id, service_attendance.service_name, service_attendance.status
+    at e.handleError (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:90:192)
+    at e.run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:87:256)
+    at run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\config\database.js:58:8)
+    at AttendanceModel.clockOut (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\models\Attendance.js:34:9)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_btn_stop.js:18:29)
+    at ButtonHandler.executeButton (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\buttonHandler.js:56:26)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:22:40)
+    at Client.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\eventHandler.js:29:63)
+    at Client.emit (node:events:509:28)
+    at InteractionCreateAction.handle (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\client\actions\InteractionCreate.js:103:12)
+[2026-07-30T09:18:31.377Z] [ERROR] Erreur dans le bouton attendance_btn_stop | Error: UNIQUE constraint failed: service_attendance.guild_id, service_attendance.user_id, service_attendance.service_name, service_attendance.status
+    at e.handleError (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:90:192)
+    at e.run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:87:256)
+    at run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\config\database.js:58:8)
+    at AttendanceModel.clockOut (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\models\Attendance.js:34:9)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_btn_stop.js:18:29)
+    at ButtonHandler.executeButton (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\buttonHandler.js:56:26)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:22:40)
+    at Client.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\eventHandler.js:29:63)
+    at Client.emit (node:events:509:28)
+    at InteractionCreateAction.handle (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\client\actions\InteractionCreate.js:103:12)
+[2026-07-30T09:21:20.076Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:21:20.079Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:21:20.081Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:21:20.082Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:21:20.084Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:21:20.087Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:21:20.090Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:21:20.093Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:21:20.094Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:21:20.096Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:21:20.097Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:21:20.099Z] [INFO] Commande chargée: /service
+[2026-07-30T09:21:20.100Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:21:20.371Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:21:20.373Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T09:21:20.375Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T09:21:20.376Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T09:21:20.378Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:21:20.379Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:21:20.381Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:21:20.382Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:21:20.383Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:21:20.384Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:21:20.385Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:21:20.386Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:21:20.387Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:21:20.388Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:21:20.389Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:21:20.390Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:21:20.391Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:21:20.392Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:21:20.393Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:21:20.394Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:21:20.395Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:21:20.396Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:21:20.398Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:21:20.399Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:21:20.400Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:21:20.401Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:21:20.401Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:21:20.402Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:21:20.403Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:21:20.405Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:21:20.407Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:21:20.409Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:21:20.410Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:21:20.411Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:21:20.412Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:21:20.413Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:21:20.415Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:21:20.415Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:21:20.417Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:21:20.418Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:21:20.419Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:21:20.420Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:21:20.421Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:21:20.423Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:21:20.424Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:21:20.425Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:21:20.426Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:21:20.427Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:21:20.429Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:21:20.429Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:21:20.430Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:21:20.431Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:21:20.431Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:21:20.432Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:21:20.433Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:21:20.433Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:21:20.434Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:21:20.435Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:21:20.436Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:21:20.437Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:21:20.438Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:21:20.439Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:21:20.440Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:21:20.441Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:21:20.442Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:21:20.443Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:21:20.444Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:21:21.130Z] [INFO] Scheduler démarré
+[2026-07-30T09:21:21.131Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:21:21.249Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:21:21.250Z] [INFO] Serveurs: 1
+[2026-07-30T09:21:21.250Z] [INFO] Utilisateurs: 50
+[2026-07-30T09:21:21.255Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:21:21.304Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:23:41.255Z] [ERROR] Erreur dans le bouton attendance_btn_stop | Error: UNIQUE constraint failed: service_attendance.guild_id, service_attendance.user_id, service_attendance.service_name, service_attendance.status
+    at e.handleError (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:90:192)
+    at e.run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:87:256)
+    at run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\config\database.js:58:8)
+    at AttendanceModel.clockOut (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\models\Attendance.js:34:9)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_btn_stop.js:18:29)
+    at ButtonHandler.executeButton (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\buttonHandler.js:56:26)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:22:40)
+    at Client.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\eventHandler.js:29:63)
+    at Client.emit (node:events:509:28)
+    at InteractionCreateAction.handle (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\client\actions\InteractionCreate.js:103:12)
+[2026-07-30T09:23:54.881Z] [ERROR] Erreur dans le bouton attendance_btn_stop | Error: UNIQUE constraint failed: service_attendance.guild_id, service_attendance.user_id, service_attendance.service_name, service_attendance.status
+    at e.handleError (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:90:192)
+    at e.run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:87:256)
+    at run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\config\database.js:58:8)
+    at AttendanceModel.clockOut (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\models\Attendance.js:34:9)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\attendance_btn_stop.js:18:29)
+    at ButtonHandler.executeButton (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\buttonHandler.js:56:26)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:22:40)
+    at Client.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\eventHandler.js:29:63)
+    at Client.emit (node:events:509:28)
+    at InteractionCreateAction.handle (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\client\actions\InteractionCreate.js:103:12)
+[2026-07-30T09:26:32.548Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:26:32.551Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:26:32.553Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:26:32.554Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:26:32.556Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:26:32.560Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:26:32.562Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:26:32.564Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:26:32.565Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:26:32.567Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:26:32.568Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:26:32.569Z] [INFO] Commande chargée: /service
+[2026-07-30T09:26:32.570Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:26:32.869Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:26:32.871Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T09:26:32.872Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T09:26:32.874Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T09:26:32.876Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:26:32.878Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:26:32.879Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:26:32.880Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:26:32.881Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:26:32.882Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:26:32.883Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:26:32.884Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:26:32.885Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:26:32.886Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:26:32.887Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:26:32.888Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:26:32.889Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:26:32.890Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:26:32.891Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:26:32.892Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:26:32.893Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:26:32.894Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:26:32.894Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:26:32.895Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:26:32.896Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:26:32.897Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:26:32.898Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:26:32.899Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:26:32.900Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:26:32.901Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:26:32.902Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:26:32.904Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:26:32.906Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:26:32.907Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:26:32.908Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:26:32.909Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:26:32.910Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:26:32.911Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:26:32.912Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:26:32.913Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:26:32.914Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:26:32.916Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:26:32.917Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:26:32.918Z] [INFO] Select Menu chargé: attendance_select_service_start
+[2026-07-30T09:26:32.919Z] [INFO] Select Menu chargé: attendance_select_service_stop
+[2026-07-30T09:26:32.921Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:26:32.922Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:26:32.923Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:26:32.925Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:26:32.926Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:26:32.927Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:26:32.928Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:26:32.929Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:26:32.929Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:26:32.930Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:26:32.931Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:26:32.932Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:26:32.932Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:26:32.933Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:26:32.934Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:26:32.934Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:26:32.935Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:26:32.936Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:26:32.937Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:26:32.938Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:26:32.939Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:26:32.940Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:26:32.941Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:26:32.942Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:26:34.274Z] [INFO] Scheduler démarré
+[2026-07-30T09:26:34.274Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:26:34.382Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:26:34.382Z] [INFO] Serveurs: 1
+[2026-07-30T09:26:34.383Z] [INFO] Utilisateurs: 50
+[2026-07-30T09:26:34.388Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:26:34.436Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T09:28:44.741Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T09:28:44.744Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T09:28:44.746Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T09:28:44.747Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T09:28:44.749Z] [INFO] Événement chargé: clientReady
+[2026-07-30T09:28:44.752Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T09:28:44.755Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T09:28:44.757Z] [INFO] Commande chargée: /rename
+[2026-07-30T09:28:44.758Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T09:28:44.760Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T09:28:44.761Z] [INFO] Commande chargée: /rio
+[2026-07-30T09:28:44.763Z] [INFO] Commande chargée: /service
+[2026-07-30T09:28:44.763Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T09:28:45.003Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T09:28:45.005Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T09:28:45.007Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T09:28:45.009Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T09:28:45.010Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T09:28:45.011Z] [INFO] Bouton chargé: config_color
+[2026-07-30T09:28:45.013Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T09:28:45.014Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T09:28:45.015Z] [INFO] Bouton chargé: config_image
+[2026-07-30T09:28:45.016Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T09:28:45.017Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T09:28:45.018Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T09:28:45.019Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T09:28:45.020Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T09:28:45.021Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T09:28:45.022Z] [INFO] Bouton chargé: config_title
+[2026-07-30T09:28:45.023Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T09:28:45.024Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T09:28:45.025Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T09:28:45.026Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T09:28:45.027Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T09:28:45.028Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T09:28:45.030Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T09:28:45.031Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T09:28:45.032Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T09:28:45.032Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T09:28:45.033Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T09:28:45.034Z] [INFO] Bouton chargé: service_create
+[2026-07-30T09:28:45.035Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T09:28:45.036Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T09:28:45.038Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T09:28:45.039Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T09:28:45.041Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T09:28:45.042Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T09:28:45.043Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T09:28:45.044Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T09:28:45.045Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T09:28:45.046Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T09:28:45.047Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T09:28:45.048Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T09:28:45.049Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T09:28:45.050Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T09:28:45.051Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T09:28:45.052Z] [INFO] Select Menu chargé: attendance_select_service_start
+[2026-07-30T09:28:45.053Z] [INFO] Select Menu chargé: attendance_select_service_stop
+[2026-07-30T09:28:45.055Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T09:28:45.056Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T09:28:45.057Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T09:28:45.058Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T09:28:45.059Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T09:28:45.061Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T09:28:45.062Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T09:28:45.062Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T09:28:45.063Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T09:28:45.064Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T09:28:45.064Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T09:28:45.065Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T09:28:45.066Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T09:28:45.067Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T09:28:45.067Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T09:28:45.068Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T09:28:45.069Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T09:28:45.070Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T09:28:45.071Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T09:28:45.072Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T09:28:45.073Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T09:28:45.074Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T09:28:45.075Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T09:28:45.076Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T09:28:45.833Z] [INFO] Scheduler démarré
+[2026-07-30T09:28:45.834Z] [INFO] Bot démarré avec succès !
+[2026-07-30T09:28:45.953Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T09:28:45.953Z] [INFO] Serveurs: 1
+[2026-07-30T09:28:45.954Z] [INFO] Utilisateurs: 50
+[2026-07-30T09:28:45.959Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T09:28:46.013Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T10:02:21.851Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T10:02:21.860Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T10:02:21.864Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T10:02:21.866Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T10:02:21.869Z] [INFO] Événement chargé: clientReady
+[2026-07-30T10:02:21.874Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T10:02:21.879Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T10:02:21.884Z] [INFO] Commande chargée: /rename
+[2026-07-30T10:02:21.887Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T10:02:21.890Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T10:02:21.894Z] [INFO] Commande chargée: /rio
+[2026-07-30T10:02:21.898Z] [INFO] Commande chargée: /service
+[2026-07-30T10:02:21.899Z] [INFO] Déploiement de 7 commandes...
+[2026-07-30T10:02:22.233Z] [INFO] 7 commandes déployées avec succès
+[2026-07-30T10:02:22.237Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T10:02:22.240Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T10:02:22.243Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T10:02:22.247Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T10:02:22.249Z] [INFO] Bouton chargé: config_color
+[2026-07-30T10:02:22.253Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T10:02:22.256Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T10:02:22.260Z] [INFO] Bouton chargé: config_image
+[2026-07-30T10:02:22.263Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T10:02:22.265Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T10:02:22.267Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T10:02:22.270Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T10:02:22.272Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T10:02:22.274Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T10:02:22.276Z] [INFO] Bouton chargé: config_title
+[2026-07-30T10:02:22.278Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T10:02:22.280Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T10:02:22.282Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T10:02:22.284Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T10:02:22.286Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T10:02:22.288Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T10:02:22.291Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T10:02:22.294Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T10:02:22.296Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T10:02:22.298Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T10:02:22.301Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T10:02:22.304Z] [INFO] Bouton chargé: service_create
+[2026-07-30T10:02:22.306Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T10:02:22.308Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T10:02:22.312Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T10:02:22.315Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T10:02:22.319Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T10:02:22.322Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T10:02:22.324Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T10:02:22.326Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T10:02:22.328Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T10:02:22.330Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T10:02:22.333Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T10:02:22.336Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T10:02:22.338Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T10:02:22.341Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T10:02:22.344Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T10:02:22.348Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T10:02:22.350Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T10:02:22.353Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T10:02:22.356Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T10:02:22.358Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T10:02:22.362Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T10:02:22.364Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T10:02:22.365Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T10:02:22.367Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T10:02:22.369Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T10:02:22.371Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T10:02:22.373Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T10:02:22.375Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T10:02:22.378Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T10:02:22.380Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T10:02:22.382Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T10:02:22.386Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T10:02:22.388Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T10:02:22.390Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T10:02:22.392Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T10:02:22.395Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T10:02:22.397Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T10:02:22.398Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T10:02:22.400Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T10:02:23.208Z] [INFO] Scheduler démarré
+[2026-07-30T10:02:23.209Z] [INFO] Bot démarré avec succès !
+[2026-07-30T10:02:23.341Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T10:02:23.342Z] [INFO] Serveurs: 1
+[2026-07-30T10:02:23.343Z] [INFO] Utilisateurs: 50
+[2026-07-30T10:02:23.354Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T10:02:23.472Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T10:08:41.671Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T10:08:41.678Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T10:08:41.683Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T10:08:41.685Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T10:08:41.688Z] [INFO] Événement chargé: clientReady
+[2026-07-30T10:08:41.693Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T10:08:41.696Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T10:08:41.700Z] [INFO] Commande chargée: /rename
+[2026-07-30T10:08:41.702Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T10:08:41.705Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T10:08:41.707Z] [INFO] Commande chargée: /rio
+[2026-07-30T10:08:41.711Z] [INFO] Commande chargée: /service
+[2026-07-30T10:08:41.715Z] [INFO] Commande chargée: /serviceall
+[2026-07-30T10:08:41.716Z] [INFO] Déploiement de 8 commandes...
+[2026-07-30T10:08:42.010Z] [INFO] 8 commandes déployées avec succès
+[2026-07-30T10:08:42.014Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T10:08:42.017Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T10:08:42.019Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T10:08:42.022Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T10:08:42.024Z] [INFO] Bouton chargé: config_color
+[2026-07-30T10:08:42.027Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T10:08:42.029Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T10:08:42.031Z] [INFO] Bouton chargé: config_image
+[2026-07-30T10:08:42.034Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T10:08:42.036Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T10:08:42.039Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T10:08:42.041Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T10:08:42.043Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T10:08:42.046Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T10:08:42.048Z] [INFO] Bouton chargé: config_title
+[2026-07-30T10:08:42.050Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T10:08:42.052Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T10:08:42.054Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T10:08:42.056Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T10:08:42.058Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T10:08:42.060Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T10:08:42.063Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T10:08:42.065Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T10:08:42.067Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T10:08:42.069Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T10:08:42.070Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T10:08:42.073Z] [INFO] Bouton chargé: service_create
+[2026-07-30T10:08:42.075Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T10:08:42.077Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T10:08:42.081Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T10:08:42.083Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T10:08:42.087Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T10:08:42.090Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T10:08:42.092Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T10:08:42.094Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T10:08:42.096Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T10:08:42.098Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T10:08:42.101Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T10:08:42.103Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T10:08:42.105Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T10:08:42.107Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T10:08:42.109Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T10:08:42.113Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T10:08:42.116Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T10:08:42.119Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T10:08:42.123Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T10:08:42.126Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T10:08:42.129Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T10:08:42.131Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T10:08:42.132Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T10:08:42.134Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T10:08:42.135Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T10:08:42.137Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T10:08:42.138Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T10:08:42.139Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T10:08:42.141Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T10:08:42.143Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T10:08:42.145Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T10:08:42.146Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T10:08:42.148Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T10:08:42.150Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T10:08:42.152Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T10:08:42.154Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T10:08:42.157Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T10:08:42.159Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T10:08:42.161Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T10:08:43.078Z] [INFO] Scheduler démarré
+[2026-07-30T10:08:43.079Z] [INFO] Bot démarré avec succès !
+[2026-07-30T10:08:43.192Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T10:08:43.193Z] [INFO] Serveurs: 1
+[2026-07-30T10:08:43.194Z] [INFO] Utilisateurs: 50
+[2026-07-30T10:08:43.201Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T10:08:43.283Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T16:46:37.155Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T16:46:37.159Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T16:46:37.161Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T16:46:37.162Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T16:46:37.163Z] [INFO] Événement chargé: clientReady
+[2026-07-30T16:46:37.167Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T16:46:37.170Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T16:46:37.171Z] [INFO] Commande chargée: /rename
+[2026-07-30T16:46:37.173Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T16:46:37.175Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T16:46:37.176Z] [INFO] Commande chargée: /rio
+[2026-07-30T16:46:37.178Z] [INFO] Commande chargée: /service
+[2026-07-30T16:46:37.179Z] [INFO] Commande chargée: /serviceall
+[2026-07-30T16:46:37.180Z] [INFO] Déploiement de 8 commandes...
+[2026-07-30T16:46:37.513Z] [INFO] 8 commandes déployées avec succès
+[2026-07-30T16:46:37.515Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T16:46:37.516Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T16:46:37.518Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T16:46:37.520Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T16:46:37.521Z] [INFO] Bouton chargé: config_color
+[2026-07-30T16:46:37.522Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T16:46:37.523Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T16:46:37.524Z] [INFO] Bouton chargé: config_image
+[2026-07-30T16:46:37.525Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T16:46:37.526Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T16:46:37.527Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T16:46:37.528Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T16:46:37.530Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T16:46:37.531Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T16:46:37.532Z] [INFO] Bouton chargé: config_title
+[2026-07-30T16:46:37.533Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T16:46:37.535Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T16:46:37.536Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T16:46:37.537Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T16:46:37.537Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T16:46:37.539Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T16:46:37.540Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T16:46:37.541Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T16:46:37.542Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T16:46:37.543Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T16:46:37.544Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T16:46:37.545Z] [INFO] Bouton chargé: service_create
+[2026-07-30T16:46:37.546Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T16:46:37.547Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T16:46:37.549Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T16:46:37.552Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T16:46:37.553Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T16:46:37.554Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T16:46:37.555Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T16:46:37.556Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T16:46:37.557Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T16:46:37.559Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T16:46:37.560Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T16:46:37.561Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T16:46:37.562Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T16:46:37.563Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T16:46:37.564Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T16:46:37.566Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T16:46:37.567Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T16:46:37.569Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T16:46:37.570Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T16:46:37.571Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T16:46:37.573Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T16:46:37.573Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T16:46:37.574Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T16:46:37.575Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T16:46:37.576Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T16:46:37.577Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T16:46:37.578Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T16:46:37.579Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T16:46:37.579Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T16:46:37.580Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T16:46:37.581Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T16:46:37.582Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T16:46:37.583Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T16:46:37.584Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T16:46:37.585Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T16:46:37.586Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T16:46:37.587Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T16:46:37.588Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T16:46:37.588Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T16:46:38.531Z] [INFO] Scheduler démarré
+[2026-07-30T16:46:38.532Z] [INFO] Bot démarré avec succès !
+[2026-07-30T16:46:38.641Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T16:46:38.641Z] [INFO] Serveurs: 1
+[2026-07-30T16:46:38.642Z] [INFO] Utilisateurs: 51
+[2026-07-30T16:46:38.647Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T16:46:38.701Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T16:48:02.064Z] [INFO] Dispatch envoyé dans #commande-bot par lenky.ytb
+[2026-07-30T16:52:31.049Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T16:52:31.052Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T16:52:31.055Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T16:52:31.056Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T16:52:31.058Z] [INFO] Événement chargé: clientReady
+[2026-07-30T16:52:31.062Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T16:52:31.064Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T16:52:31.066Z] [INFO] Commande chargée: /rename
+[2026-07-30T16:52:31.068Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T16:52:31.070Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T16:52:31.071Z] [INFO] Commande chargée: /rio
+[2026-07-30T16:52:31.073Z] [INFO] Commande chargée: /service
+[2026-07-30T16:52:31.074Z] [INFO] Commande chargée: /serviceall
+[2026-07-30T16:52:31.075Z] [INFO] Déploiement de 8 commandes...
+[2026-07-30T16:52:31.336Z] [INFO] 8 commandes déployées avec succès
+[2026-07-30T16:52:31.339Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T16:52:31.340Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T16:52:31.341Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T16:52:31.343Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T16:52:31.344Z] [INFO] Bouton chargé: config_color
+[2026-07-30T16:52:31.346Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T16:52:31.347Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T16:52:31.349Z] [INFO] Bouton chargé: config_image
+[2026-07-30T16:52:31.350Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T16:52:31.350Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T16:52:31.352Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T16:52:31.353Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T16:52:31.354Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T16:52:31.355Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T16:52:31.356Z] [INFO] Bouton chargé: config_title
+[2026-07-30T16:52:31.357Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T16:52:31.359Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T16:52:31.360Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T16:52:31.361Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T16:52:31.362Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T16:52:31.363Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T16:52:31.364Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T16:52:31.366Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T16:52:31.367Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T16:52:31.368Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T16:52:31.369Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T16:52:31.370Z] [INFO] Bouton chargé: service_create
+[2026-07-30T16:52:31.371Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T16:52:31.372Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T16:52:31.374Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T16:52:31.375Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T16:52:31.377Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T16:52:31.378Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T16:52:31.379Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T16:52:31.380Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T16:52:31.382Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T16:52:31.383Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T16:52:31.384Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T16:52:31.386Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T16:52:31.387Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T16:52:31.388Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T16:52:31.389Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T16:52:31.391Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T16:52:31.392Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T16:52:31.394Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T16:52:31.395Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T16:52:31.397Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T16:52:31.398Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T16:52:31.399Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T16:52:31.400Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T16:52:31.401Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T16:52:31.402Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T16:52:31.403Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T16:52:31.404Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T16:52:31.404Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T16:52:31.405Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T16:52:31.406Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T16:52:31.406Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T16:52:31.407Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T16:52:31.408Z] [INFO] Modale chargée: dispatch_retard_modal
+[2026-07-30T16:52:31.409Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T16:52:31.411Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T16:52:31.411Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T16:52:31.413Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T16:52:31.414Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T16:52:31.415Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T16:52:31.415Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T16:52:32.121Z] [INFO] Scheduler démarré
+[2026-07-30T16:52:32.122Z] [INFO] Bot démarré avec succès !
+[2026-07-30T16:52:32.288Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T16:52:32.289Z] [INFO] Serveurs: 1
+[2026-07-30T16:52:32.289Z] [INFO] Utilisateurs: 51
+[2026-07-30T16:52:32.294Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T16:52:32.353Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T16:52:54.522Z] [INFO] Dispatch envoyé dans #commande-bot par lenky.ytb
+[2026-07-30T16:53:17.024Z] [INFO] lenky.ytb marqué présent au dispatch
+[2026-07-30T16:53:24.283Z] [INFO] lenky.ytb marqué absent au dispatch
+[2026-07-30T16:53:37.403Z] [INFO] lenky.ytb marqué en retard: test (arrivée 21h10)
+[2026-07-30T16:58:19.496Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T16:58:19.499Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T16:58:19.501Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T16:58:19.502Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T16:58:19.504Z] [INFO] Événement chargé: clientReady
+[2026-07-30T16:58:19.508Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T16:58:19.510Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T16:58:19.512Z] [INFO] Commande chargée: /rename
+[2026-07-30T16:58:19.513Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T16:58:19.515Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T16:58:19.516Z] [INFO] Commande chargée: /rio
+[2026-07-30T16:58:19.518Z] [INFO] Commande chargée: /service
+[2026-07-30T16:58:19.519Z] [INFO] Commande chargée: /serviceall
+[2026-07-30T16:58:19.519Z] [INFO] Déploiement de 8 commandes...
+[2026-07-30T16:58:19.796Z] [INFO] 8 commandes déployées avec succès
+[2026-07-30T16:58:19.798Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T16:58:19.799Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T16:58:19.800Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T16:58:19.802Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T16:58:19.803Z] [INFO] Bouton chargé: config_color
+[2026-07-30T16:58:19.804Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T16:58:19.806Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T16:58:19.807Z] [INFO] Bouton chargé: config_image
+[2026-07-30T16:58:19.808Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T16:58:19.809Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T16:58:19.810Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T16:58:19.811Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T16:58:19.812Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T16:58:19.813Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T16:58:19.815Z] [INFO] Bouton chargé: config_title
+[2026-07-30T16:58:19.816Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T16:58:19.817Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T16:58:19.818Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T16:58:19.819Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T16:58:19.819Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T16:58:19.820Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T16:58:19.821Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T16:58:19.823Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T16:58:19.824Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T16:58:19.824Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T16:58:19.825Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T16:58:19.826Z] [INFO] Bouton chargé: service_create
+[2026-07-30T16:58:19.827Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T16:58:19.828Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T16:58:19.830Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T16:58:19.831Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T16:58:19.833Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T16:58:19.834Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T16:58:19.835Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T16:58:19.836Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T16:58:19.837Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T16:58:19.838Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T16:58:19.839Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T16:58:19.841Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T16:58:19.841Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T16:58:19.842Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T16:58:19.843Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T16:58:19.845Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T16:58:19.846Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T16:58:19.847Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T16:58:19.848Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T16:58:19.849Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T16:58:19.851Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T16:58:19.852Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T16:58:19.852Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T16:58:19.853Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T16:58:19.854Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T16:58:19.854Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T16:58:19.855Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T16:58:19.856Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T16:58:19.857Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T16:58:19.857Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T16:58:19.858Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T16:58:19.859Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T16:58:19.860Z] [INFO] Modale chargée: dispatch_retard_modal
+[2026-07-30T16:58:19.861Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T16:58:19.862Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T16:58:19.862Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T16:58:19.864Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T16:58:19.865Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T16:58:19.866Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T16:58:19.866Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T16:58:20.612Z] [INFO] Scheduler démarré
+[2026-07-30T16:58:20.613Z] [INFO] Bot démarré avec succès !
+[2026-07-30T16:58:20.737Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T16:58:20.738Z] [INFO] Serveurs: 1
+[2026-07-30T16:58:20.738Z] [INFO] Utilisateurs: 51
+[2026-07-30T16:58:20.744Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T16:58:20.804Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T16:58:47.049Z] [INFO] Dispatch envoyé dans #commande-bot par lenky.ytb
+[2026-07-30T17:00:50.805Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T17:00:50.809Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T17:00:50.811Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T17:00:50.812Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T17:00:50.813Z] [INFO] Événement chargé: clientReady
+[2026-07-30T17:00:50.818Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T17:00:50.820Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T17:00:50.822Z] [INFO] Commande chargée: /rename
+[2026-07-30T17:00:50.824Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T17:00:50.826Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T17:00:50.827Z] [INFO] Commande chargée: /rio
+[2026-07-30T17:00:50.829Z] [INFO] Commande chargée: /service
+[2026-07-30T17:00:50.830Z] [INFO] Commande chargée: /serviceall
+[2026-07-30T17:00:50.830Z] [INFO] Déploiement de 8 commandes...
+[2026-07-30T17:00:51.136Z] [INFO] 8 commandes déployées avec succès
+[2026-07-30T17:00:51.138Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T17:00:51.140Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T17:00:51.143Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T17:00:51.146Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T17:00:51.148Z] [INFO] Bouton chargé: config_color
+[2026-07-30T17:00:51.150Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T17:00:51.152Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T17:00:51.153Z] [INFO] Bouton chargé: config_image
+[2026-07-30T17:00:51.154Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T17:00:51.155Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T17:00:51.156Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T17:00:51.158Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T17:00:51.160Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T17:00:51.161Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T17:00:51.162Z] [INFO] Bouton chargé: config_title
+[2026-07-30T17:00:51.163Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T17:00:51.164Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T17:00:51.165Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T17:00:51.167Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T17:00:51.167Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T17:00:51.169Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T17:00:51.170Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T17:00:51.171Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T17:00:51.172Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T17:00:51.173Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T17:00:51.174Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T17:00:51.176Z] [INFO] Bouton chargé: service_create
+[2026-07-30T17:00:51.176Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T17:00:51.177Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T17:00:51.179Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T17:00:51.181Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T17:00:51.183Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T17:00:51.184Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T17:00:51.185Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T17:00:51.186Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T17:00:51.187Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T17:00:51.188Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T17:00:51.189Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T17:00:51.190Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T17:00:51.191Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T17:00:51.193Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T17:00:51.194Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T17:00:51.195Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T17:00:51.196Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T17:00:51.198Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T17:00:51.199Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T17:00:51.201Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T17:00:51.202Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T17:00:51.203Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T17:00:51.204Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T17:00:51.205Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T17:00:51.206Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T17:00:51.207Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T17:00:51.208Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T17:00:51.208Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T17:00:51.209Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T17:00:51.210Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T17:00:51.211Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T17:00:51.211Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T17:00:51.212Z] [INFO] Modale chargée: dispatch_retard_modal
+[2026-07-30T17:00:51.214Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T17:00:51.215Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T17:00:51.215Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T17:00:51.217Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T17:00:51.218Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T17:00:51.219Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T17:00:51.219Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T17:00:51.943Z] [INFO] Scheduler démarré
+[2026-07-30T17:00:51.943Z] [INFO] Bot démarré avec succès !
+[2026-07-30T17:00:52.051Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T17:00:52.052Z] [INFO] Serveurs: 1
+[2026-07-30T17:00:52.052Z] [INFO] Utilisateurs: 51
+[2026-07-30T17:00:52.058Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T17:00:52.125Z] [INFO] Bot prêt à fonctionner !
+[2026-07-30T17:01:02.943Z] [INFO] Dispatch envoyé dans #commande-bot par lenky.ytb
+[2026-07-30T17:07:11.928Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-30T17:07:11.932Z] [INFO] Événement chargé: interactionCreate
+[2026-07-30T17:07:11.934Z] [INFO] Événement chargé: messageCreate
+[2026-07-30T17:07:11.936Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-30T17:07:11.937Z] [INFO] Événement chargé: clientReady
+[2026-07-30T17:07:11.941Z] [INFO] Commande chargée: /dashboard
+[2026-07-30T17:07:11.944Z] [INFO] Commande chargée: /dispatch
+[2026-07-30T17:07:11.946Z] [INFO] Commande chargée: /rename
+[2026-07-30T17:07:11.948Z] [INFO] Commande chargée: /rhconfig
+[2026-07-30T17:07:11.949Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-30T17:07:11.951Z] [INFO] Commande chargée: /rio
+[2026-07-30T17:07:11.953Z] [INFO] Commande chargée: /service
+[2026-07-30T17:07:11.954Z] [INFO] Commande chargée: /serviceall
+[2026-07-30T17:07:11.954Z] [INFO] Déploiement de 8 commandes...
+[2026-07-30T17:07:12.236Z] [INFO] 8 commandes déployées avec succès
+[2026-07-30T17:07:12.238Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-30T17:07:12.239Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-30T17:07:12.241Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-30T17:07:12.243Z] [INFO] Bouton chargé: config_close_message
+[2026-07-30T17:07:12.244Z] [INFO] Bouton chargé: config_color
+[2026-07-30T17:07:12.245Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-30T17:07:12.246Z] [INFO] Bouton chargé: config_footer
+[2026-07-30T17:07:12.247Z] [INFO] Bouton chargé: config_image
+[2026-07-30T17:07:12.248Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-30T17:07:12.249Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-30T17:07:12.250Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-30T17:07:12.251Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-30T17:07:12.252Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-30T17:07:12.253Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-30T17:07:12.254Z] [INFO] Bouton chargé: config_title
+[2026-07-30T17:07:12.255Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-30T17:07:12.256Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-30T17:07:12.258Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-30T17:07:12.259Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-30T17:07:12.259Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-30T17:07:12.261Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-30T17:07:12.262Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-30T17:07:12.263Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-30T17:07:12.264Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-30T17:07:12.264Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-30T17:07:12.265Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-30T17:07:12.267Z] [INFO] Bouton chargé: service_create
+[2026-07-30T17:07:12.268Z] [INFO] Bouton chargé: service_reset
+[2026-07-30T17:07:12.269Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-30T17:07:12.271Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-30T17:07:12.272Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-30T17:07:12.274Z] [INFO] Bouton chargé: ticket_close
+[2026-07-30T17:07:12.276Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-30T17:07:12.277Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-30T17:07:12.278Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-30T17:07:12.279Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-30T17:07:12.280Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-30T17:07:12.281Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-30T17:07:12.282Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-30T17:07:12.283Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-30T17:07:12.284Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-30T17:07:12.286Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-30T17:07:12.288Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-30T17:07:12.289Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-30T17:07:12.290Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-30T17:07:12.291Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-30T17:07:12.293Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-30T17:07:12.294Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-30T17:07:12.295Z] [INFO] Modale chargée: config_color_modal
+[2026-07-30T17:07:12.296Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-30T17:07:12.297Z] [INFO] Modale chargée: config_image_modal
+[2026-07-30T17:07:12.297Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-30T17:07:12.298Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-30T17:07:12.299Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-30T17:07:12.300Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-30T17:07:12.301Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-30T17:07:12.301Z] [INFO] Modale chargée: config_title_modal
+[2026-07-30T17:07:12.302Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-30T17:07:12.303Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-30T17:07:12.304Z] [INFO] Modale chargée: dispatch_retard_modal
+[2026-07-30T17:07:12.305Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-30T17:07:12.306Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-30T17:07:12.307Z] [INFO] Modale chargée: rio_modal
+[2026-07-30T17:07:12.308Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-30T17:07:12.309Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-30T17:07:12.310Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-30T17:07:12.311Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-30T17:07:12.980Z] [INFO] Scheduler démarré
+[2026-07-30T17:07:12.980Z] [INFO] Bot démarré avec succès !
+[2026-07-30T17:07:13.104Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-30T17:07:13.104Z] [INFO] Serveurs: 1
+[2026-07-30T17:07:13.105Z] [INFO] Utilisateurs: 51
+[2026-07-30T17:07:13.110Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-30T17:07:13.165Z] [INFO] Bot prêt à fonctionner !

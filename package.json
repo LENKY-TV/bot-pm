@@ -1,0 +1,17 @@
+{
+  "name": "policemunicipale-rh",
+  "version": "1.0.0",
+  "description": "Bot Discord Premium - Gestion RH Police Municipale",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "sql.js": "^1.10.3",
+    "dotenv": "^16.3.1"
+  },
+  "author": "PoliceMunicipale-RH",
+  "license": "MIT"
+}

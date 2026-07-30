@@ -1,0 +1,1509 @@
+[2026-07-29T22:57:31.271Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T22:57:31.275Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T22:57:31.278Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T22:57:31.279Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T22:57:31.281Z] [INFO] Événement chargé: clientReady
+[2026-07-29T22:57:31.287Z] [INFO] Commande chargée: /add
+[2026-07-29T22:57:31.289Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T22:57:31.291Z] [INFO] Commande chargée: /help
+[2026-07-29T22:57:31.292Z] [INFO] Commande chargée: /panel
+[2026-07-29T22:57:31.294Z] [INFO] Commande chargée: /priority
+[2026-07-29T22:57:31.296Z] [INFO] Commande chargée: /remove
+[2026-07-29T22:57:31.298Z] [INFO] Commande chargée: /rename
+[2026-07-29T22:57:31.300Z] [INFO] Commande chargée: /reopen
+[2026-07-29T22:57:31.301Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T22:57:31.303Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T22:57:31.304Z] [INFO] Commande chargée: /search
+[2026-07-29T22:57:31.306Z] [INFO] Commande chargée: /service
+[2026-07-29T22:57:31.307Z] [INFO] Commande chargée: /stats
+[2026-07-29T22:57:31.307Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T22:57:31.697Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T22:57:31.700Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T22:57:31.701Z] [INFO] Bouton chargé: config_color
+[2026-07-29T22:57:31.702Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T22:57:31.704Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T22:57:31.705Z] [INFO] Bouton chargé: config_image
+[2026-07-29T22:57:31.707Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T22:57:31.707Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T22:57:31.708Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T22:57:31.710Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T22:57:31.711Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T22:57:31.712Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T22:57:31.713Z] [INFO] Bouton chargé: config_title
+[2026-07-29T22:57:31.714Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T22:57:31.715Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T22:57:31.716Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T22:57:31.717Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T22:57:31.718Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T22:57:31.719Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T22:57:31.720Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T22:57:31.721Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T22:57:31.722Z] [INFO] Bouton chargé: service_create
+[2026-07-29T22:57:31.723Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T22:57:31.724Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T22:57:31.726Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T22:57:31.727Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T22:57:31.729Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T22:57:31.730Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T22:57:31.731Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T22:57:31.733Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T22:57:31.734Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T22:57:31.735Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T22:57:31.736Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T22:57:31.738Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T22:57:31.739Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T22:57:31.740Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T22:57:31.742Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T22:57:31.744Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T22:57:31.745Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T22:57:31.747Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T22:57:31.748Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T22:57:31.750Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T22:57:31.751Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T22:57:31.752Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T22:57:31.753Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T22:57:31.754Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T22:57:31.755Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T22:57:31.756Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T22:57:31.756Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T22:57:31.757Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T22:57:31.758Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T22:57:31.759Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T22:57:31.760Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T22:57:31.760Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T22:57:31.762Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T22:57:31.762Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T22:57:31.764Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T22:57:31.765Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T22:57:31.766Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T22:57:31.767Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T22:57:32.462Z] [INFO] Bot démarré avec succès !
+[2026-07-29T22:57:32.582Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T22:57:32.583Z] [INFO] Serveurs: 1
+[2026-07-29T22:57:32.583Z] [INFO] Utilisateurs: 51
+[2026-07-29T22:57:32.608Z] [ERROR] Exception monitor: | {"code":"ERR_UNHANDLED_ERROR","context":"Wrong API use : tried to bind a value of an unknown type (undefined)."}
+[2026-07-29T22:57:32.609Z] [ERROR] Exception non capturée: | {"code":"ERR_UNHANDLED_ERROR","context":"Wrong API use : tried to bind a value of an unknown type (undefined)."}
+[2026-07-29T22:58:16.031Z] [ERROR] Erreur dans la commande /rhconfig | "Wrong API use : tried to bind a value of an unknown type (undefined)."
+[2026-07-29T23:01:44.094Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:01:44.097Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:01:44.099Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:01:44.100Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:01:44.103Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:01:44.108Z] [INFO] Commande chargée: /add
+[2026-07-29T23:01:44.110Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:01:44.111Z] [INFO] Commande chargée: /help
+[2026-07-29T23:01:44.112Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:01:44.115Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:01:44.116Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:01:44.117Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:01:44.119Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:01:44.120Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:01:44.121Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:01:44.123Z] [INFO] Commande chargée: /search
+[2026-07-29T23:01:44.124Z] [INFO] Commande chargée: /service
+[2026-07-29T23:01:44.125Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:01:44.125Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:01:44.387Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:01:44.389Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:01:44.390Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:01:44.391Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:01:44.393Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:01:44.394Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:01:44.395Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:01:44.395Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:01:44.396Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:01:44.398Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:01:44.399Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:01:44.400Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:01:44.401Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:01:44.402Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:01:44.403Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:01:44.404Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:01:44.405Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:01:44.406Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:01:44.407Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:01:44.408Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:01:44.409Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:01:44.409Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:01:44.410Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:01:44.411Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:01:44.413Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:01:44.414Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:01:44.416Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:01:44.417Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:01:44.418Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:01:44.419Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:01:44.420Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:01:44.421Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:01:44.422Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:01:44.423Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:01:44.423Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:01:44.425Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:01:44.426Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:01:44.428Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:01:44.429Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:01:44.430Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:01:44.431Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:01:44.433Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:01:44.434Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:01:44.435Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:01:44.436Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:01:44.437Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:01:44.437Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:01:44.438Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:01:44.439Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:01:44.440Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:01:44.440Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:01:44.441Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:01:44.442Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:01:44.442Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:01:44.444Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:01:44.444Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:01:44.446Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:01:44.447Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:01:44.448Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:01:44.449Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:01:45.111Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:01:45.390Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:01:45.390Z] [INFO] Serveurs: 1
+[2026-07-29T23:01:45.390Z] [INFO] Utilisateurs: 51
+[2026-07-29T23:01:45.398Z] [ERROR] Exception monitor: | {}
+[2026-07-29T23:01:45.399Z] [ERROR] Exception non capturée: | {}
+[2026-07-29T23:02:18.364Z] [ERROR] Erreur dans la commande /rhconfig | {}
+[2026-07-29T23:02:18.371Z] [ERROR] Erreur dans la commande /rhconfig | "Wrong API use : tried to bind a value of an unknown type (undefined)."
+[2026-07-29T23:02:18.602Z] [ERROR] Exception monitor: | {"rawError":{"message":"Unknown interaction","code":10062},"code":10062,"status":404,"method":"POST","url":"https://discord.com/api/v10/interactions/1532161376330715327/aW50ZXJhY3Rpb246MTUzMjE2MTM3NjMzMDcxNTMyNzpSYjdtazhOVXgyeFVGb2hNQUZzNnNNNFM0bjVpU2ZCRU1Wb1hPdzY3dXhLWDhiTGhtUUx4Y2I0bFltWTZrTE1xYkxjcklHQ1I5cVlubm9TYlUwdXV1NXdFalBETUplSWpjRTh2dm9YRVVyblA1RlVod3VsRkM2eHRqYXREbUhwNw/callback?with_response=false","requestBody":{"files":[],"json":{"type":4,"data":{"content":"❌ Une erreur est survenue lors de l'exécution de cette commande.","tts":false,"enforce_nonce":false,"flags":64}}}}
+[2026-07-29T23:02:18.603Z] [ERROR] Exception non capturée: | {"rawError":{"message":"Unknown interaction","code":10062},"code":10062,"status":404,"method":"POST","url":"https://discord.com/api/v10/interactions/1532161376330715327/aW50ZXJhY3Rpb246MTUzMjE2MTM3NjMzMDcxNTMyNzpSYjdtazhOVXgyeFVGb2hNQUZzNnNNNFM0bjVpU2ZCRU1Wb1hPdzY3dXhLWDhiTGhtUUx4Y2I0bFltWTZrTE1xYkxjcklHQ1I5cVlubm9TYlUwdXV1NXdFalBETUplSWpjRTh2dm9YRVVyblA1RlVod3VsRkM2eHRqYXREbUhwNw/callback?with_response=false","requestBody":{"files":[],"json":{"type":4,"data":{"content":"❌ Une erreur est survenue lors de l'exécution de cette commande.","tts":false,"enforce_nonce":false,"flags":64}}}}
+[2026-07-29T23:02:34.036Z] [INFO] Arrêt du bot...
+[2026-07-29T23:04:00.232Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:04:00.236Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:04:00.238Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:04:00.239Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:04:00.241Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:04:00.246Z] [INFO] Commande chargée: /add
+[2026-07-29T23:04:00.248Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:04:00.249Z] [INFO] Commande chargée: /help
+[2026-07-29T23:04:00.251Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:04:00.253Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:04:00.254Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:04:00.255Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:04:00.257Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:04:00.258Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:04:00.259Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:04:00.260Z] [INFO] Commande chargée: /search
+[2026-07-29T23:04:00.262Z] [INFO] Commande chargée: /service
+[2026-07-29T23:04:00.263Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:04:00.263Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:04:00.533Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:04:00.535Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:04:00.537Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:04:00.538Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:04:00.539Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:04:00.540Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:04:00.541Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:04:00.542Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:04:00.543Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:04:00.544Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:04:00.546Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:04:00.547Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:04:00.548Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:04:00.549Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:04:00.550Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:04:00.551Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:04:00.552Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:04:00.552Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:04:00.553Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:04:00.554Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:04:00.555Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:04:00.556Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:04:00.556Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:04:00.558Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:04:00.559Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:04:00.560Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:04:00.562Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:04:00.563Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:04:00.565Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:04:00.566Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:04:00.567Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:04:00.568Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:04:00.569Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:04:00.570Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:04:00.571Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:04:00.572Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:04:00.573Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:04:00.575Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:04:00.576Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:04:00.577Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:04:00.578Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:04:00.580Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:04:00.582Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:04:00.583Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:04:00.583Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:04:00.584Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:04:00.585Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:04:00.585Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:04:00.586Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:04:00.587Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:04:00.588Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:04:00.588Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:04:00.589Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:04:00.590Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:04:00.592Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:04:00.592Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:04:00.594Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:04:00.595Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:04:00.596Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:04:00.596Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:04:01.313Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:04:01.439Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:04:01.439Z] [INFO] Serveurs: 1
+[2026-07-29T23:04:01.440Z] [INFO] Utilisateurs: 51
+[2026-07-29T23:04:01.471Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:04:01.559Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:04:15.761Z] [ERROR] Erreur dans la commande /rhconfig | Error: UNIQUE constraint failed: config.guild_id, config.key
+    at e.handleError (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:90:192)
+    at e.run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\sql.js\dist\sql-wasm.js:87:256)
+    at run (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\config\database.js:58:8)
+    at ConfigModel.set (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\models\Config.js:25:20)
+    at ConfigModel.initDefaults (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\models\Config.js:72:22)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhconfig.js:22:21)
+    at CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:27)
+    at Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:41)
+    at Client.<anonymous> (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\eventHandler.js:29:63)
+    at Client.emit (node:events:509:28)
+[2026-07-29T23:05:32.510Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:05:32.514Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:05:32.517Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:05:32.518Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:05:32.520Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:05:32.525Z] [INFO] Commande chargée: /add
+[2026-07-29T23:05:32.527Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:05:32.528Z] [INFO] Commande chargée: /help
+[2026-07-29T23:05:32.529Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:05:32.531Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:05:32.533Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:05:32.534Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:05:32.536Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:05:32.537Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:05:32.539Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:05:32.540Z] [INFO] Commande chargée: /search
+[2026-07-29T23:05:32.541Z] [INFO] Commande chargée: /service
+[2026-07-29T23:05:32.543Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:05:32.543Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:05:33.907Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:05:33.910Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:05:33.911Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:05:33.913Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:05:33.914Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:05:33.915Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:05:33.916Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:05:33.917Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:05:33.918Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:05:33.919Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:05:33.920Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:05:33.921Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:05:33.922Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:05:33.923Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:05:33.924Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:05:33.925Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:05:33.927Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:05:33.927Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:05:33.928Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:05:33.929Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:05:33.930Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:05:33.931Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:05:33.932Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:05:33.933Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:05:33.935Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:05:33.936Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:05:33.938Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:05:33.939Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:05:33.940Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:05:33.941Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:05:33.942Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:05:33.943Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:05:33.944Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:05:33.945Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:05:33.946Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:05:33.947Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:05:33.948Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:05:33.950Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:05:33.952Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:05:33.953Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:05:33.954Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:05:33.956Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:05:33.958Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:05:33.959Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:05:33.959Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:05:33.960Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:05:33.961Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:05:33.962Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:05:33.962Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:05:33.963Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:05:33.964Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:05:33.964Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:05:33.965Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:05:33.966Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:05:33.968Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:05:33.969Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:05:33.970Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:05:33.971Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:05:33.972Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:05:33.973Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:05:34.601Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:05:34.707Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:05:34.707Z] [INFO] Serveurs: 1
+[2026-07-29T23:05:34.708Z] [INFO] Utilisateurs: 51
+[2026-07-29T23:05:34.713Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:05:34.763Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:06:06.846Z] [INFO] Dashboard déployé par lenky.ytb
+[2026-07-29T23:06:40.439Z] [INFO] Panneau affiché dans #💬・discussion-tuteurs par lenky.ytb
+[2026-07-29T23:06:54.690Z] [INFO] Ticket #1 ouvert par lenky.ytb pour Directeur
+[2026-07-29T23:07:25.496Z] [INFO] Ticket #1 fermé par lenky.ytb
+[2026-07-29T23:07:33.286Z] [INFO] Ticket #1 évalué 1/10 par lenky.ytb
+[2026-07-29T23:08:29.625Z] [ERROR] Erreur lors de la suppression du salon | DiscordAPIError[10003]: Unknown Channel
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SequentialHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1198:23)
+    at async SequentialHandler.queueRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1029:14)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async GuildChannelManager.delete (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\managers\GuildChannelManager.js:514:5)
+    at async TextChannel.delete (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\GuildChannel.js:475:5)
+    at async Timeout._onTimeout (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\ticket_close.js:164:21)
+[2026-07-29T23:16:28.952Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:16:28.955Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:16:28.958Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:16:28.959Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:16:28.961Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:16:28.966Z] [INFO] Commande chargée: /add
+[2026-07-29T23:16:28.968Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:16:28.969Z] [INFO] Commande chargée: /help
+[2026-07-29T23:16:28.971Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:16:28.973Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:16:28.974Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:16:28.976Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:16:28.977Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:16:28.979Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:16:28.980Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:16:28.981Z] [INFO] Commande chargée: /search
+[2026-07-29T23:16:28.982Z] [INFO] Commande chargée: /service
+[2026-07-29T23:16:28.983Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:16:28.984Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:16:29.276Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:16:29.279Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:16:29.280Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:16:29.281Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:16:29.282Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:16:29.284Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:16:29.285Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:16:29.286Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:16:29.287Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:16:29.288Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:16:29.289Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:16:29.290Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:16:29.291Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:16:29.292Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:16:29.293Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:16:29.294Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:16:29.295Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:16:29.296Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:16:29.297Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:16:29.298Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:16:29.299Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:16:29.300Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:16:29.301Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:16:29.302Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:16:29.304Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:16:29.306Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:16:29.307Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:16:29.309Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:16:29.310Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:16:29.311Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:16:29.312Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:16:29.313Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:16:29.314Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:16:29.316Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:16:29.317Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:16:29.318Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:16:29.319Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:16:29.322Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:16:29.323Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:16:29.324Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:16:29.326Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:16:29.328Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:16:29.329Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:16:29.330Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:16:29.331Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:16:29.332Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:16:29.332Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:16:29.333Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:16:29.334Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:16:29.335Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:16:29.335Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:16:29.336Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:16:29.337Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:16:29.338Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:16:29.339Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:16:29.340Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:16:29.341Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:16:29.342Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:16:29.343Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:16:29.344Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:16:29.993Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:16:30.101Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:16:30.101Z] [INFO] Serveurs: 1
+[2026-07-29T23:16:30.102Z] [INFO] Utilisateurs: 50
+[2026-07-29T23:16:30.106Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:16:30.157Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:17:32.248Z] [INFO] Panneau affiché dans #📃・ᴛɪᴄᴋᴇᴛ par lenky.ytb
+[2026-07-29T23:17:52.178Z] [INFO] Ticket #2 ouvert par lenky.ytb pour Suggestions Police Municipale
+[2026-07-29T23:18:17.206Z] [INFO] Ticket #2 fermé par lenky.ytb
+[2026-07-29T23:19:19.347Z] [ERROR] Erreur lors de la suppression du salon | DiscordAPIError[10003]: Unknown Channel
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SequentialHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1198:23)
+    at async SequentialHandler.queueRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1029:14)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async GuildChannelManager.delete (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\managers\GuildChannelManager.js:514:5)
+    at async TextChannel.delete (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\GuildChannel.js:475:5)
+    at async Timeout._onTimeout (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\ticket_close.js:164:21)
+[2026-07-29T23:21:53.163Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:21:53.166Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:21:53.168Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:21:53.169Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:21:53.171Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:21:53.177Z] [INFO] Commande chargée: /add
+[2026-07-29T23:21:53.178Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:21:53.179Z] [INFO] Commande chargée: /help
+[2026-07-29T23:21:53.181Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:21:53.183Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:21:53.185Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:21:53.186Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:21:53.188Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:21:53.189Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:21:53.190Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:21:53.191Z] [INFO] Commande chargée: /search
+[2026-07-29T23:21:53.192Z] [INFO] Commande chargée: /service
+[2026-07-29T23:21:53.193Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:21:53.193Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:21:53.447Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:21:53.450Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:21:53.451Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:21:53.453Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:21:53.454Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:21:53.455Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:21:53.456Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:21:53.457Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:21:53.458Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:21:53.459Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:21:53.460Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:21:53.461Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:21:53.462Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:21:53.463Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:21:53.464Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:21:53.465Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:21:53.466Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:21:53.467Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:21:53.467Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:21:53.468Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:21:53.469Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:21:53.470Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:21:53.471Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:21:53.472Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:21:53.473Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:21:53.474Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:21:53.477Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:21:53.478Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:21:53.479Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:21:53.480Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:21:53.481Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:21:53.482Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:21:53.483Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:21:53.485Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:21:53.485Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:21:53.486Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:21:53.488Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:21:53.490Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:21:53.491Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:21:53.492Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:21:53.493Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:21:53.495Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:21:53.496Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:21:53.497Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:21:53.498Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:21:53.499Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:21:53.500Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:21:53.500Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:21:53.501Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:21:53.502Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:21:53.503Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:21:53.504Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:21:53.504Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:21:53.505Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:21:53.507Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:21:53.507Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:21:53.509Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:21:53.510Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:21:53.510Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:21:53.511Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:21:54.118Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:21:54.236Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:21:54.237Z] [INFO] Serveurs: 1
+[2026-07-29T23:21:54.237Z] [INFO] Utilisateurs: 50
+[2026-07-29T23:21:54.267Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:21:54.354Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:22:45.117Z] [INFO] Panneau affiché dans #📃・ᴛɪᴄᴋᴇᴛ par lenky.ytb
+[2026-07-29T23:22:50.684Z] [INFO] Ticket #1 ouvert par lenky.ytb pour Directeur
+[2026-07-29T23:23:05.408Z] [INFO] Ticket #1 fermé par lenky.ytb
+[2026-07-29T23:24:07.278Z] [ERROR] Erreur lors de la suppression du salon | DiscordAPIError[10003]: Unknown Channel
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SequentialHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1198:23)
+    at async SequentialHandler.queueRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1029:14)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async GuildChannelManager.delete (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\managers\GuildChannelManager.js:514:5)
+    at async TextChannel.delete (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\GuildChannel.js:475:5)
+    at async Timeout._onTimeout (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\buttons\ticket_close.js:164:21)
+[2026-07-29T23:24:25.745Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:24:25.749Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:24:25.751Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:24:25.752Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:24:25.754Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:24:25.759Z] [INFO] Commande chargée: /add
+[2026-07-29T23:24:25.761Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:24:25.762Z] [INFO] Commande chargée: /help
+[2026-07-29T23:24:25.763Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:24:25.765Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:24:25.767Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:24:25.768Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:24:25.770Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:24:25.772Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:24:25.773Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:24:25.774Z] [INFO] Commande chargée: /search
+[2026-07-29T23:24:25.776Z] [INFO] Commande chargée: /service
+[2026-07-29T23:24:25.777Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:24:25.778Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:24:26.101Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:24:26.103Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:24:26.104Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:24:26.106Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:24:26.108Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:24:26.109Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:24:26.110Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:24:26.111Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:24:26.112Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:24:26.113Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:24:26.114Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:24:26.115Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:24:26.116Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:24:26.117Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:24:26.118Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:24:26.119Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:24:26.120Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:24:26.121Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:24:26.122Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:24:26.123Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:24:26.124Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:24:26.126Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:24:26.126Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:24:26.128Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:24:26.129Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:24:26.130Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:24:26.133Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:24:26.134Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:24:26.136Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:24:26.137Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:24:26.139Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:24:26.139Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:24:26.140Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:24:26.142Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:24:26.143Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:24:26.144Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:24:26.145Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:24:26.148Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:24:26.149Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:24:26.150Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:24:26.151Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:24:26.153Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:24:26.154Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:24:26.155Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:24:26.156Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:24:26.156Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:24:26.157Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:24:26.158Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:24:26.159Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:24:26.160Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:24:26.160Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:24:26.161Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:24:26.162Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:24:26.163Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:24:26.164Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:24:26.165Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:24:26.166Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:24:26.168Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:24:26.169Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:24:26.169Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:24:26.921Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:24:27.032Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:24:27.032Z] [INFO] Serveurs: 1
+[2026-07-29T23:24:27.032Z] [INFO] Utilisateurs: 49
+[2026-07-29T23:24:27.038Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:24:27.085Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:25:40.531Z] [INFO] Panneau affiché dans #📃・ᴛɪᴄᴋᴇᴛ par lenky.ytb
+[2026-07-29T23:25:49.963Z] [INFO] Ticket #2 ouvert par lenky.ytb pour Directeur
+[2026-07-29T23:26:09.899Z] [INFO] Ticket #2 pris en charge par lenky.ytb
+[2026-07-29T23:26:18.967Z] [INFO] Ticket #2 renommé en "test" par lenky.ytb
+[2026-07-29T23:26:26.498Z] [INFO] Ticket #2 priorité changée en "Urgent" par lenky.ytb
+[2026-07-29T23:26:43.590Z] [INFO] Ticket #2 priorité changée en "Urgent" par lenky.ytb
+[2026-07-29T23:27:10.405Z] [INFO] Membre agri_theo ajouté au ticket #2 par lenky.ytb
+[2026-07-29T23:27:30.008Z] [INFO] Note ajoutée au ticket #2 par lenky.ytb
+[2026-07-29T23:27:47.554Z] [INFO] Ticket #2 fermé par lenky.ytb
+[2026-07-29T23:31:31.500Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:31:31.503Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:31:31.505Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:31:31.506Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:31:31.508Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:31:31.513Z] [INFO] Commande chargée: /add
+[2026-07-29T23:31:31.515Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:31:31.516Z] [INFO] Commande chargée: /help
+[2026-07-29T23:31:31.518Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:31:31.520Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:31:31.521Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:31:31.522Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:31:31.524Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:31:31.525Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:31:31.527Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:31:31.528Z] [INFO] Commande chargée: /search
+[2026-07-29T23:31:31.529Z] [INFO] Commande chargée: /service
+[2026-07-29T23:31:31.530Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:31:31.531Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:31:31.784Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:31:31.787Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:31:31.788Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:31:31.790Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:31:31.791Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:31:31.792Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:31:31.793Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:31:31.794Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:31:31.795Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:31:31.796Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:31:31.797Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:31:31.798Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:31:31.799Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:31:31.800Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:31:31.801Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:31:31.802Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:31:31.802Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:31:31.803Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:31:31.804Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:31:31.805Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:31:31.806Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:31:31.807Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:31:31.808Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:31:31.809Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:31:31.811Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:31:31.812Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:31:31.813Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:31:31.814Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:31:31.816Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:31:31.817Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:31:31.818Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:31:31.819Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:31:31.820Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:31:31.821Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:31:31.821Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:31:31.822Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:31:31.824Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:31:31.826Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:31:31.827Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:31:31.828Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:31:31.829Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:31:31.831Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:31:31.832Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:31:31.833Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:31:31.834Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:31:31.834Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:31:31.835Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:31:31.836Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:31:31.836Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:31:31.837Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:31:31.838Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:31:31.838Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:31:31.839Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:31:31.840Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:31:31.841Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:31:31.842Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:31:31.843Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:31:31.844Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:31:31.844Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:31:31.845Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:31:32.524Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:31:32.633Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:31:32.633Z] [INFO] Serveurs: 1
+[2026-07-29T23:31:32.633Z] [INFO] Utilisateurs: 49
+[2026-07-29T23:31:32.638Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:31:32.688Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:31:48.161Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:31:48.189Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:31:48.373Z] [ERROR] Erreur lors de l'affichage du panneau | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:93:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:31:48.515Z] [ERROR] Erreur dans la commande /panel | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:99:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:33:30.299Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:33:30.553Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:33:30.738Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:33:30.888Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:27.332Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:35:27.335Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:35:27.338Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:35:27.339Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:35:27.341Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:35:27.346Z] [INFO] Commande chargée: /add
+[2026-07-29T23:35:27.348Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:35:27.349Z] [INFO] Commande chargée: /help
+[2026-07-29T23:35:27.351Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:35:27.353Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:35:27.354Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:35:27.355Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:35:27.357Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:35:27.358Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:35:27.359Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:35:27.360Z] [INFO] Commande chargée: /search
+[2026-07-29T23:35:27.361Z] [INFO] Commande chargée: /service
+[2026-07-29T23:35:27.362Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:35:27.363Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:35:27.633Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:35:27.635Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:35:27.636Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:35:27.638Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:35:27.640Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:35:27.641Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:35:27.642Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:35:27.643Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:35:27.644Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:35:27.645Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:35:27.646Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:35:27.647Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:35:27.648Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:35:27.649Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:35:27.651Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:35:27.651Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:35:27.652Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:35:27.653Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:35:27.654Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:35:27.655Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:35:27.655Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:35:27.657Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:35:27.657Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:35:27.658Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:35:27.660Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:35:27.661Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:35:27.663Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:35:27.664Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:35:27.665Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:35:27.666Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:35:27.667Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:35:27.668Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:35:27.669Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:35:27.670Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:35:27.671Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:35:27.671Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:35:27.673Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:35:27.675Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:35:27.676Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:35:27.677Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:35:27.678Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:35:27.680Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:35:27.681Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:35:27.682Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:35:27.683Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:35:27.683Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:35:27.684Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:35:27.685Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:35:27.685Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:35:27.686Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:35:27.687Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:35:27.687Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:35:27.688Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:35:27.689Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:35:27.690Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:35:27.691Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:35:27.692Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:35:27.693Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:35:27.694Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:35:27.695Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:35:28.867Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:35:28.974Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:35:28.975Z] [INFO] Serveurs: 1
+[2026-07-29T23:35:28.975Z] [INFO] Utilisateurs: 49
+[2026-07-29T23:35:28.980Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:35:29.027Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:35:41.852Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:35:41.872Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:35:41.906Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:35:42.050Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:42.092Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:42.199Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:42.277Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:46.316Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:35:46.320Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:35:46.353Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:35:46.480Z] [ERROR] Erreur lors de l'affichage du panneau | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:93:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:46.530Z] [ERROR] Erreur lors de l'affichage du panneau | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:93:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:46.626Z] [ERROR] Erreur dans la commande /panel | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:99:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:35:46.676Z] [ERROR] Erreur dans la commande /panel | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:99:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:14.008Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:39:14.011Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:39:14.013Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:39:14.015Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:39:14.016Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:39:14.022Z] [INFO] Commande chargée: /add
+[2026-07-29T23:39:14.023Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:39:14.024Z] [INFO] Commande chargée: /help
+[2026-07-29T23:39:14.026Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:39:14.027Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:39:14.029Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:39:14.030Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:39:14.032Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:39:14.033Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:39:14.034Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:39:14.035Z] [INFO] Commande chargée: /search
+[2026-07-29T23:39:14.036Z] [INFO] Commande chargée: /service
+[2026-07-29T23:39:14.037Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:39:14.038Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:39:14.282Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:39:14.285Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:39:14.286Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:39:14.287Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:39:14.288Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:39:14.290Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:39:14.291Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:39:14.292Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:39:14.293Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:39:14.294Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:39:14.295Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:39:14.296Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:39:14.297Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:39:14.298Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:39:14.300Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:39:14.301Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:39:14.302Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:39:14.302Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:39:14.303Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:39:14.304Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:39:14.305Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:39:14.306Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:39:14.307Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:39:14.308Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:39:14.310Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:39:14.311Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:39:14.313Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:39:14.314Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:39:14.315Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:39:14.317Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:39:14.318Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:39:14.319Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:39:14.320Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:39:14.321Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:39:14.322Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:39:14.323Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:39:14.324Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:39:14.326Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:39:14.327Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:39:14.329Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:39:14.330Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:39:14.331Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:39:14.333Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:39:14.333Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:39:14.334Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:39:14.335Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:39:14.336Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:39:14.336Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:39:14.337Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:39:14.338Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:39:14.339Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:39:14.340Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:39:14.341Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:39:14.341Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:39:14.343Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:39:14.343Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:39:14.345Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:39:14.346Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:39:14.346Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:39:14.347Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:39:14.989Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:39:15.108Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:39:15.109Z] [INFO] Serveurs: 1
+[2026-07-29T23:39:15.109Z] [INFO] Utilisateurs: 49
+[2026-07-29T23:39:15.114Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:39:15.161Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:39:21.883Z] [ERROR] Erreur dans la commande /rhconfig | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhconfig.js:120:9)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:21.906Z] [ERROR] Erreur dans la commande /rhconfig | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhconfig.js:120:9)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:21.926Z] [ERROR] Erreur dans la commande /rhconfig | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhconfig.js:120:9)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:33.297Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:33.339Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:33.344Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:33.386Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:33.527Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:33.540Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:33.579Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:33.665Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:33.696Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:34.923Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:48.221Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:48.234Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:48.244Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:48.255Z] [INFO] Panneau affiché dans #commande-bot par lenky.ytb
+[2026-07-29T23:39:48.409Z] [ERROR] Erreur lors de l'affichage du panneau | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:93:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:48.426Z] [ERROR] Erreur lors de l'affichage du panneau | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:93:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:48.439Z] [ERROR] Erreur lors de l'affichage du panneau | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:93:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:48.550Z] [ERROR] Erreur dans la commande /panel | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:99:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:49.764Z] [ERROR] Erreur dans la commande /panel | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:99:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:39:49.778Z] [ERROR] Erreur dans la commande /panel | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\panel.js:99:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:40:43.704Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:40:43.760Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:40:43.792Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:40:43.844Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:40:43.942Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:40:43.986Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:40:44.017Z] [ERROR] Erreur lors du déploiement | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:100:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:40:44.126Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:40:44.140Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:40:45.425Z] [ERROR] Erreur dans la commande /rhdeploy | DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:791:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async BurstHandler.runRequest (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:898:23)
+    at async _REST.request (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\@discordjs\rest\dist\index.js:1342:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:193:22)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\commands\rhdeploy.js:106:13)
+    at async CommandHandler.executeCommand (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\handlers\commandHandler.js:84:13)
+    at async Object.execute (C:\Users\lenny\OneDrive\Bureau\Lenny Dev\Bot Discord PM\events\interactionCreate.js:16:13)
+[2026-07-29T23:42:05.879Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:42:05.883Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:42:05.885Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:42:05.886Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:42:05.888Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:42:05.895Z] [INFO] Commande chargée: /add
+[2026-07-29T23:42:05.896Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:42:05.897Z] [INFO] Commande chargée: /help
+[2026-07-29T23:42:05.899Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:42:05.902Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:42:05.904Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:42:05.905Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:42:05.907Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:42:05.909Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:42:05.910Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:42:05.911Z] [INFO] Commande chargée: /search
+[2026-07-29T23:42:05.913Z] [INFO] Commande chargée: /service
+[2026-07-29T23:42:05.914Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:42:05.915Z] [INFO] Déploiement de 13 commandes...
+[2026-07-29T23:42:06.178Z] [INFO] 13 commandes déployées avec succès
+[2026-07-29T23:42:06.180Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:42:06.181Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:42:06.183Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:42:06.185Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:42:06.186Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:42:06.188Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:42:06.189Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:42:06.191Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:42:06.192Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:42:06.193Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:42:06.195Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:42:06.196Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:42:06.197Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:42:06.198Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:42:06.200Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:42:06.201Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:42:06.202Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:42:06.203Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:42:06.204Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:42:06.205Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:42:06.206Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:42:06.207Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:42:06.208Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:42:06.210Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:42:06.211Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:42:06.213Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:42:06.214Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:42:06.216Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:42:06.217Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:42:06.218Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:42:06.220Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:42:06.221Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:42:06.223Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:42:06.223Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:42:06.225Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:42:06.226Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:42:06.228Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:42:06.230Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:42:06.231Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:42:06.232Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:42:06.234Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:42:06.235Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:42:06.236Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:42:06.237Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:42:06.238Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:42:06.239Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:42:06.240Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:42:06.240Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:42:06.241Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:42:06.242Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:42:06.243Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:42:06.243Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:42:06.244Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:42:06.246Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:42:06.246Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:42:06.248Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:42:06.249Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:42:06.250Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:42:06.251Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:42:09.357Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:42:09.464Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:42:09.465Z] [INFO] Serveurs: 1
+[2026-07-29T23:42:09.465Z] [INFO] Utilisateurs: 49
+[2026-07-29T23:42:09.472Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:42:09.527Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:42:25.185Z] [INFO] Panneau déployé dans #commande-bot par lenky.ytb
+[2026-07-29T23:46:30.949Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:46:30.953Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:46:30.955Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:46:30.956Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:46:30.958Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:46:30.964Z] [INFO] Commande chargée: /add
+[2026-07-29T23:46:30.965Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:46:30.966Z] [INFO] Commande chargée: /help
+[2026-07-29T23:46:30.968Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:46:30.969Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:46:30.971Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:46:30.972Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:46:30.974Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:46:30.975Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:46:30.976Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:46:30.977Z] [INFO] Commande chargée: /rio
+[2026-07-29T23:46:30.978Z] [INFO] Commande chargée: /search
+[2026-07-29T23:46:30.979Z] [INFO] Commande chargée: /service
+[2026-07-29T23:46:30.980Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:46:30.981Z] [INFO] Déploiement de 14 commandes...
+[2026-07-29T23:46:31.280Z] [INFO] 14 commandes déployées avec succès
+[2026-07-29T23:46:31.282Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:46:31.283Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:46:31.285Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:46:31.286Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:46:31.287Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:46:31.287Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:46:31.288Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:46:31.289Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:46:31.291Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:46:31.292Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:46:31.293Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:46:31.293Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:46:31.294Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:46:31.295Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:46:31.297Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:46:31.297Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:46:31.299Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:46:31.300Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:46:31.301Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:46:31.302Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:46:31.302Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:46:31.303Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:46:31.304Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:46:31.306Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:46:31.307Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:46:31.309Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:46:31.310Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:46:31.311Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:46:31.312Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:46:31.313Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:46:31.314Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:46:31.315Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:46:31.316Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:46:31.317Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:46:31.318Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:46:31.319Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:46:31.321Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:46:31.322Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:46:31.323Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:46:31.324Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:46:31.325Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:46:31.327Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:46:31.328Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:46:31.329Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:46:31.330Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:46:31.330Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:46:31.331Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:46:31.332Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:46:31.332Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:46:31.333Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:46:31.334Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:46:31.335Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:46:31.335Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:46:31.336Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:46:31.337Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:46:31.338Z] [INFO] Modale chargée: rio_modal
+[2026-07-29T23:46:31.339Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:46:31.340Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:46:31.341Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:46:31.341Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:46:32.032Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:46:32.147Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:46:32.147Z] [INFO] Serveurs: 1
+[2026-07-29T23:46:32.147Z] [INFO] Utilisateurs: 49
+[2026-07-29T23:46:32.153Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:46:32.202Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:47:12.862Z] [INFO] Rôle "RIO : 6452182" créé par lenky.ytb
+[2026-07-29T23:47:13.142Z] [INFO] Rôle "RIO : 6452182" attribué à lenky.ytb par lenky.ytb
+[2026-07-29T23:48:54.527Z] [INFO] Rôle "RIO : 6350126" créé par lenky.ytb
+[2026-07-29T23:48:54.950Z] [INFO] Rôle "RIO : 6350126" attribué à agri_theo par lenky.ytb
+[2026-07-29T23:55:03.772Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-29T23:55:03.775Z] [INFO] Événement chargé: interactionCreate
+[2026-07-29T23:55:03.777Z] [INFO] Événement chargé: messageCreate
+[2026-07-29T23:55:03.779Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-29T23:55:03.781Z] [INFO] Événement chargé: clientReady
+[2026-07-29T23:55:03.787Z] [INFO] Commande chargée: /add
+[2026-07-29T23:55:03.789Z] [INFO] Commande chargée: /dashboard
+[2026-07-29T23:55:03.790Z] [INFO] Commande chargée: /dispatch
+[2026-07-29T23:55:03.792Z] [INFO] Commande chargée: /help
+[2026-07-29T23:55:03.793Z] [INFO] Commande chargée: /panel
+[2026-07-29T23:55:03.795Z] [INFO] Commande chargée: /priority
+[2026-07-29T23:55:03.797Z] [INFO] Commande chargée: /remove
+[2026-07-29T23:55:03.798Z] [INFO] Commande chargée: /rename
+[2026-07-29T23:55:03.800Z] [INFO] Commande chargée: /reopen
+[2026-07-29T23:55:03.801Z] [INFO] Commande chargée: /rhconfig
+[2026-07-29T23:55:03.803Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-29T23:55:03.804Z] [INFO] Commande chargée: /rio
+[2026-07-29T23:55:03.805Z] [INFO] Commande chargée: /search
+[2026-07-29T23:55:03.806Z] [INFO] Commande chargée: /service
+[2026-07-29T23:55:03.807Z] [INFO] Commande chargée: /stats
+[2026-07-29T23:55:03.808Z] [INFO] Déploiement de 15 commandes...
+[2026-07-29T23:55:04.137Z] [INFO] 15 commandes déployées avec succès
+[2026-07-29T23:55:04.139Z] [INFO] Bouton chargé: config_close_message
+[2026-07-29T23:55:04.141Z] [INFO] Bouton chargé: config_color
+[2026-07-29T23:55:04.143Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-29T23:55:04.144Z] [INFO] Bouton chargé: config_footer
+[2026-07-29T23:55:04.145Z] [INFO] Bouton chargé: config_image
+[2026-07-29T23:55:04.146Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-29T23:55:04.147Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-29T23:55:04.148Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-29T23:55:04.150Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-29T23:55:04.151Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-29T23:55:04.153Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-29T23:55:04.154Z] [INFO] Bouton chargé: config_title
+[2026-07-29T23:55:04.155Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-29T23:55:04.156Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-29T23:55:04.157Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-29T23:55:04.158Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-29T23:55:04.159Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-29T23:55:04.161Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-29T23:55:04.161Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-29T23:55:04.162Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-29T23:55:04.163Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-29T23:55:04.164Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-29T23:55:04.165Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-29T23:55:04.167Z] [INFO] Bouton chargé: service_create
+[2026-07-29T23:55:04.167Z] [INFO] Bouton chargé: service_reset
+[2026-07-29T23:55:04.169Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-29T23:55:04.170Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-29T23:55:04.171Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-29T23:55:04.173Z] [INFO] Bouton chargé: ticket_close
+[2026-07-29T23:55:04.174Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-29T23:55:04.175Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-29T23:55:04.177Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-29T23:55:04.178Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-29T23:55:04.178Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-29T23:55:04.179Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-29T23:55:04.181Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-29T23:55:04.182Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-29T23:55:04.183Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-29T23:55:04.184Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-29T23:55:04.186Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-29T23:55:04.187Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-29T23:55:04.189Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-29T23:55:04.190Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-29T23:55:04.191Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-29T23:55:04.193Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-29T23:55:04.193Z] [INFO] Modale chargée: config_color_modal
+[2026-07-29T23:55:04.194Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-29T23:55:04.195Z] [INFO] Modale chargée: config_image_modal
+[2026-07-29T23:55:04.195Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-29T23:55:04.196Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-29T23:55:04.197Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-29T23:55:04.198Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-29T23:55:04.199Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-29T23:55:04.199Z] [INFO] Modale chargée: config_title_modal
+[2026-07-29T23:55:04.200Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-29T23:55:04.201Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-29T23:55:04.202Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-29T23:55:04.202Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-29T23:55:04.203Z] [INFO] Modale chargée: rio_modal
+[2026-07-29T23:55:04.205Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-29T23:55:04.206Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-29T23:55:04.207Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-29T23:55:04.208Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-29T23:55:05.094Z] [INFO] Bot démarré avec succès !
+[2026-07-29T23:55:05.217Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-29T23:55:05.218Z] [INFO] Serveurs: 1
+[2026-07-29T23:55:05.218Z] [INFO] Utilisateurs: 48
+[2026-07-29T23:55:05.223Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-29T23:55:05.275Z] [INFO] Bot prêt à fonctionner !
+[2026-07-29T23:55:19.895Z] [INFO] Dispatch envoyé dans #🪧・dispatch par lenky.ytb
+[2026-07-29T23:55:28.510Z] [INFO] lenky.ytb marqué présent au dispatch
+[2026-07-29T23:55:32.522Z] [INFO] lenky.ytb marqué en retard au dispatch
+[2026-07-29T23:55:34.432Z] [INFO] lenky.ytb marqué absent au dispatch
+[2026-07-29T23:55:36.638Z] [INFO] lenky.ytb marqué présent au dispatch
+[2026-07-29T23:58:04.482Z] [INFO] lenky.ytb marqué présent au dispatch
+[2026-07-29T23:58:20.665Z] [INFO] Panneau affiché dans #🪧・dispatch par lenky.ytb
+[2026-07-29T23:58:33.823Z] [INFO] Dispatch envoyé dans #🪧・dispatch par lenky.ytb
