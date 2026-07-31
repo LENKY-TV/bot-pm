@@ -7,7 +7,7 @@ const { ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = re
 const TicketModel = require('../models/Ticket');
 const StaffModel = require('../models/Staff');
 const ClaimModel = require('../models/Claim');
-const LogModel = require('../models/log');
+const LogModel = require('../models/Log');
 const EmbedUtils = require('../utils/embedBuilder');
 const Logger = require('../utils/logger');
 

@@ -1,0 +1,90 @@
+[2026-07-31T15:44:39.193Z] [INFO] Démarrage du bot PoliceMunicipale-RH...
+[2026-07-31T15:44:39.200Z] [INFO] Événement chargé: interactionCreate
+[2026-07-31T15:44:39.205Z] [INFO] Événement chargé: messageCreate
+[2026-07-31T15:44:39.207Z] [INFO] Événement chargé: presenceUpdate
+[2026-07-31T15:44:39.210Z] [INFO] Événement chargé: clientReady
+[2026-07-31T15:44:39.216Z] [INFO] Commande chargée: /dashboard
+[2026-07-31T15:44:39.220Z] [INFO] Commande chargée: /dispatch
+[2026-07-31T15:44:39.224Z] [INFO] Commande chargée: /rename
+[2026-07-31T15:44:39.228Z] [INFO] Commande chargée: /rhconfig
+[2026-07-31T15:44:39.232Z] [INFO] Commande chargée: /rhdeploy
+[2026-07-31T15:44:39.235Z] [INFO] Commande chargée: /rio
+[2026-07-31T15:44:39.239Z] [INFO] Commande chargée: /service
+[2026-07-31T15:44:39.241Z] [INFO] Commande chargée: /serviceall
+[2026-07-31T15:44:39.241Z] [INFO] Déploiement de 8 commandes...
+[2026-07-31T15:44:39.665Z] [INFO] 8 commandes déployées avec succès
+[2026-07-31T15:44:39.670Z] [INFO] Bouton chargé: attendance_btn_pause
+[2026-07-31T15:44:39.673Z] [INFO] Bouton chargé: attendance_btn_start
+[2026-07-31T15:44:39.675Z] [INFO] Bouton chargé: attendance_btn_stop
+[2026-07-31T15:44:39.678Z] [INFO] Bouton chargé: config_close_message
+[2026-07-31T15:44:39.681Z] [INFO] Bouton chargé: config_color
+[2026-07-31T15:44:39.683Z] [INFO] Bouton chargé: config_dashboard
+[2026-07-31T15:44:39.685Z] [INFO] Bouton chargé: config_footer
+[2026-07-31T15:44:39.687Z] [INFO] Bouton chargé: config_image
+[2026-07-31T15:44:39.688Z] [INFO] Bouton chargé: config_log_channel
+[2026-07-31T15:44:39.690Z] [INFO] Bouton chargé: config_rating_toggle
+[2026-07-31T15:44:39.692Z] [INFO] Bouton chargé: config_reminder_interval
+[2026-07-31T15:44:39.693Z] [INFO] Bouton chargé: config_reminder_max
+[2026-07-31T15:44:39.696Z] [INFO] Bouton chargé: config_thumbnail
+[2026-07-31T15:44:39.698Z] [INFO] Bouton chargé: config_ticket_category
+[2026-07-31T15:44:39.700Z] [INFO] Bouton chargé: config_title
+[2026-07-31T15:44:39.703Z] [INFO] Bouton chargé: config_transcript_channel
+[2026-07-31T15:44:39.706Z] [INFO] Bouton chargé: config_welcome_message
+[2026-07-31T15:44:39.708Z] [INFO] Bouton chargé: dashboard_agents
+[2026-07-31T15:44:39.710Z] [INFO] Bouton chargé: dashboard_stats
+[2026-07-31T15:44:39.712Z] [INFO] Bouton chargé: dashboard_tickets
+[2026-07-31T15:44:39.715Z] [INFO] Bouton chargé: dispatch_absent
+[2026-07-31T15:44:39.717Z] [INFO] Bouton chargé: dispatch_present
+[2026-07-31T15:44:39.720Z] [INFO] Bouton chargé: dispatch_retard
+[2026-07-31T15:44:39.722Z] [INFO] Bouton chargé: rhconfig_export
+[2026-07-31T15:44:39.724Z] [INFO] Bouton chargé: rhconfig_info
+[2026-07-31T15:44:39.725Z] [INFO] Bouton chargé: rhconfig_reset
+[2026-07-31T15:44:39.727Z] [INFO] Bouton chargé: service_create
+[2026-07-31T15:44:39.729Z] [INFO] Bouton chargé: service_reset
+[2026-07-31T15:44:39.731Z] [INFO] Bouton chargé: ticket_add_member
+[2026-07-31T15:44:39.734Z] [INFO] Bouton chargé: ticket_claim
+[2026-07-31T15:44:39.737Z] [INFO] Bouton chargé: ticket_claim_all
+[2026-07-31T15:44:39.740Z] [INFO] Bouton chargé: ticket_close
+[2026-07-31T15:44:39.742Z] [INFO] Bouton chargé: ticket_close_all
+[2026-07-31T15:44:39.745Z] [INFO] Bouton chargé: ticket_lock
+[2026-07-31T15:44:39.747Z] [INFO] Bouton chargé: ticket_notes
+[2026-07-31T15:44:39.749Z] [INFO] Bouton chargé: ticket_priority
+[2026-07-31T15:44:39.751Z] [INFO] Bouton chargé: ticket_rate_1
+[2026-07-31T15:44:39.753Z] [INFO] Bouton chargé: ticket_remove_member
+[2026-07-31T15:44:39.755Z] [INFO] Bouton chargé: ticket_rename
+[2026-07-31T15:44:39.757Z] [INFO] Bouton chargé: ticket_stats
+[2026-07-31T15:44:39.759Z] [INFO] Bouton chargé: ticket_transcript
+[2026-07-31T15:44:39.763Z] [INFO] Bouton chargé: ticket_unlock
+[2026-07-31T15:44:39.767Z] [INFO] Select Menu chargé: rhconfig_main
+[2026-07-31T15:44:39.768Z] [INFO] Select Menu chargé: rhconfig_service_edit
+[2026-07-31T15:44:39.771Z] [INFO] Select Menu chargé: search_ticket_select
+[2026-07-31T15:44:39.773Z] [INFO] Select Menu chargé: ticket_priority_select
+[2026-07-31T15:44:39.775Z] [INFO] Select Menu chargé: ticket_service_select
+[2026-07-31T15:44:39.779Z] [INFO] Modale chargée: config_close_message_modal
+[2026-07-31T15:44:39.781Z] [INFO] Modale chargée: config_color_modal
+[2026-07-31T15:44:39.782Z] [INFO] Modale chargée: config_footer_modal
+[2026-07-31T15:44:39.784Z] [INFO] Modale chargée: config_image_modal
+[2026-07-31T15:44:39.785Z] [INFO] Modale chargée: config_log_channel_modal
+[2026-07-31T15:44:39.787Z] [INFO] Modale chargée: config_reminder_interval_modal
+[2026-07-31T15:44:39.789Z] [INFO] Modale chargée: config_reminder_max_modal
+[2026-07-31T15:44:39.790Z] [INFO] Modale chargée: config_thumbnail_modal
+[2026-07-31T15:44:39.792Z] [INFO] Modale chargée: config_ticket_category_modal
+[2026-07-31T15:44:39.794Z] [INFO] Modale chargée: config_title_modal
+[2026-07-31T15:44:39.796Z] [INFO] Modale chargée: config_transcript_channel_modal
+[2026-07-31T15:44:39.798Z] [INFO] Modale chargée: config_welcome_message_modal
+[2026-07-31T15:44:39.800Z] [INFO] Modale chargée: dispatch_retard_modal
+[2026-07-31T15:44:39.803Z] [INFO] Modale chargée: rhconfig_service_create_modal
+[2026-07-31T15:44:39.805Z] [INFO] Modale chargée: rhconfig_service_edit_modal
+[2026-07-31T15:44:39.807Z] [INFO] Modale chargée: rio_modal
+[2026-07-31T15:44:39.809Z] [INFO] Modale chargée: ticket_add_member_modal
+[2026-07-31T15:44:39.812Z] [INFO] Modale chargée: ticket_notes_modal
+[2026-07-31T15:44:39.814Z] [INFO] Modale chargée: ticket_remove_member_modal
+[2026-07-31T15:44:39.816Z] [INFO] Modale chargée: ticket_rename_modal
+[2026-07-31T15:44:40.500Z] [INFO] Scheduler démarré
+[2026-07-31T15:44:40.501Z] [INFO] Bot démarré avec succès !
+[2026-07-31T15:44:40.761Z] [INFO] Bot connecté en tant que RH Police Municipale#5955
+[2026-07-31T15:44:40.761Z] [INFO] Serveurs: 1
+[2026-07-31T15:44:40.762Z] [INFO] Utilisateurs: 53
+[2026-07-31T15:44:40.768Z] [INFO] Configuration initialisée pour 93 RP | Police Municipale 93
+[2026-07-31T15:44:40.866Z] [INFO] Bot prêt à fonctionner !
+[2026-07-31T15:44:48.191Z] [INFO] Dispatch envoyé dans #commande-bot par lenky.ytb

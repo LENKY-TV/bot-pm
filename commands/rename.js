@@ -5,7 +5,7 @@
 
 const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 const TicketModel = require('../models/Ticket');
-const LogModel = require('../models/log');
+const LogModel = require('../models/Log');
 const EmbedUtils = require('../utils/embedBuilder');
 const Logger = require('../utils/logger');
 

@@ -5,7 +5,7 @@
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const TicketModel = require('../models/Ticket');
-const LogModel = require('../models/log');
+const LogModel = require('../models/Log');
 const EmbedUtils = require('../utils/embedBuilder');
 const TranscriptUtils = require('../utils/transcript');
 const Logger = require('../utils/logger');
