@@ -30,9 +30,6 @@ class Logger {
             logEntry = `[${timestamp}] [${level}] ${message}`;
         }
 
-        const logFile = path.join(LOG_DIR, `${new Date().toISOString().split('T')[0]}.log`);
-        fs.appendFileSync(logFile, logEntry + '\n');
-
         const colors = {
             INFO: '\x1b[36m',
             WARN: '\x1b[33m',
@@ -40,6 +37,13 @@ class Logger {
             DEBUG: '\x1b[35m'
         };
         console.log(`${colors[level] || ''}${logEntry}\x1b[0m`);
+
+        try {
+            const logFile = path.join(LOG_DIR, `${new Date().toISOString().split('T')[0]}.log`);
+            fs.appendFileSync(logFile, logEntry + '\n');
+        } catch (e) {
+            // Ignorer l'erreur si le fichier de log n'est pas accessible
+        }
     }
 
     static info(message, data) {

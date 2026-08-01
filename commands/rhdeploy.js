@@ -31,7 +31,7 @@ module.exports = {
         if (!botPerms.has('SendMessages') || !botPerms.has('EmbedLinks')) {
             return interaction.reply({
                 content: '❌ Je n\'ai pas les permissions nécessaires dans ce salon.',
-                ephemeral: true
+                flags: 64
             });
         }
 
@@ -39,9 +39,11 @@ module.exports = {
         if (services.length === 0) {
             return interaction.reply({
                 content: '❌ Aucun service configuré. Utilisez `/rhconfig` pour en configurer.',
-                ephemeral: true
+                flags: 64
             });
         }
+
+        await interaction.deferReply({ flags: 64 });
 
         ConfigModel.initDefaults(guildId);
 
@@ -97,15 +99,13 @@ module.exports = {
 
             Logger.info(`Panneau déployé dans #${channel.name} par ${interaction.user.tag}`);
 
-            await interaction.reply({
-                content: `✅ Panneau déployé avec succès dans ${channel} !`,
-                ephemeral: true
+            await interaction.editReply({
+                content: `✅ Panneau déployé avec succès dans ${channel} !`
             });
         } catch (error) {
             Logger.error('Erreur lors du déploiement', error);
-            await interaction.reply({
-                content: '❌ Une erreur est survenue lors du déploiement.',
-                ephemeral: true
+            await interaction.editReply({
+                content: '❌ Une erreur est survenue lors du déploiement.'
             });
         }
     }
