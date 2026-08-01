@@ -244,6 +244,19 @@ function createTables() {
         on_pause INTEGER DEFAULT 0,
         pause_start TEXT DEFAULT NULL
     )`);
+
+    db.run(`CREATE TABLE IF NOT EXISTS absences (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        guild_id TEXT NOT NULL,
+        user_id TEXT NOT NULL,
+        start_date TEXT NOT NULL,
+        end_date TEXT NOT NULL,
+        reason TEXT NOT NULL,
+        status TEXT DEFAULT 'pending',
+        message_id TEXT DEFAULT NULL,
+        reviewed_by TEXT DEFAULT NULL,
+        created_at TEXT DEFAULT (datetime('now'))
+    )`);
 }
 
 module.exports = { initDatabase, run, get, all, saveDatabase };
