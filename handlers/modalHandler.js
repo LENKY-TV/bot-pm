@@ -37,7 +37,18 @@ class ModalHandler {
      * Exécute une modale
      */
     async executeModal(interaction) {
-        const modal = this.modals.get(interaction.customId);
+        let modal = this.modals.get(interaction.customId);
+        
+        // Si pas trouvé, chercher par prefix (pour les customIds dynamiques)
+        if (!modal) {
+            for (const [key, value] of this.modals) {
+                if (interaction.customId.startsWith(key)) {
+                    modal = value;
+                    break;
+                }
+            }
+        }
+
         if (!modal) return;
 
         try {

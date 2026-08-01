@@ -7,7 +7,12 @@ module.exports = {
         const channelId = interaction.customId.replace('messagepm_modal_', '');
         const title = interaction.fields.getTextInputValue('message_title');
         const message = interaction.fields.getTextInputValue('message_content');
-        const color = interaction.fields.getTextInputValue('message_color') || '#1a1a2e';
+        let color = interaction.fields.getTextInputValue('message_color') || '#1a1a2e';
+
+        // Valider la couleur
+        if (!/^#[0-9A-Fa-f]{6}$/.test(color)) {
+            color = '#1a1a2e';
+        }
 
         try {
             const channel = await client.channels.fetch(channelId);
@@ -29,6 +34,7 @@ module.exports = {
                 ephemeral: true
             });
         } catch (error) {
+            console.error(error);
             await interaction.reply({
                 content: '❌ Erreur lors de l\'envoi du message.',
                 ephemeral: true
