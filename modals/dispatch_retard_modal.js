@@ -1,4 +1,4 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require('discord.js');
 const { responses } = require('../utils/dispatchTracker');
 const Logger = require('../utils/logger');
 
@@ -7,9 +7,7 @@ module.exports = {
 
     async execute(interaction, client) {
         const userId = interaction.user.id;
-        const messageId = interaction.message?.id || interaction.fields?.messageId;
 
-        // Find the dispatch message
         let foundMessageId = null;
         for (const [id, data] of responses.entries()) {
             if (data.channelId === interaction.channel.id) {
@@ -34,11 +32,9 @@ module.exports = {
             data.retard.push(userId);
         }
 
-        // Store justification
         if (!data.retardJustifications) data.retardJustifications = {};
         data.retardJustifications[userId] = { reason, arrivalTime };
 
-        // Update buttons
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()
                 .setCustomId('dispatch_present')
@@ -65,10 +61,20 @@ module.exports = {
             }
         } catch (e) {}
 
-        await interaction.reply({
-            content: `🟠 **Retard enregistré**\n> **Raison:** ${reason}\n> **Arrivée prévue:** ${arrivalTime}`,
-            ephemeral: true
-        });
+        const embed = new EmbedBuilder()
+            .setTitle('🟠 ・Retard enregistré')
+            .setDescription(
+                `> *Justification transmise*\n\n` +
+                `**━━━━━━━━━━━━━━━━━━━━━━━━━━━**\n\n` +
+                `> 📝 **Raison** ・ ${reason}\n` +
+                `> 🕐 **Arrivée prévue** ・ ${arrivalTime}\n` +
+                `> 👤 **Agent** ・ <@${userId}>\n\n` +
+                `**━━━━━━━━━━━━━━━━━━━━━━━━━━━**`
+            )
+            .setColor('#FF8C00')
+            .setTimestamp();
+
+        await interaction.reply({ embeds: [embed], ephemeral: true });
 
         Logger.info(`${interaction.user.tag} marqué en retard: ${reason} (arrivée ${arrivalTime})`);
     }
