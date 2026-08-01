@@ -3,7 +3,7 @@
  * Ferme un ticket
  */
 
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { ActionRowBuilder } = require('discord.js');
 const TicketModel = require('../models/Ticket');
 const LogModel = require('../models/Log');
 const EmbedUtils = require('../utils/embedBuilder');
@@ -103,69 +103,18 @@ module.exports = {
                 });
             }
 
-            // Demander une évaluation
-            const ratingEmbed = EmbedUtils.create(guildId, {
-                title: '⭐ Évaluation',
-                description: 'Donnez une note de 1 à 10 pour évaluer la qualité du service.',
-                color: '#FFD700'
+            await interaction.editReply({
+                content: `✅ Ticket #${ticket.ticket_number} fermé. Le salon sera supprimé dans 10 secondes.`
             });
 
-            const ratingRow = new ActionRowBuilder().addComponents(
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_1`)
-                    .setLabel('1')
-                    .setStyle(ButtonStyle.Danger),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_2`)
-                    .setLabel('2')
-                    .setStyle(ButtonStyle.Danger),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_3`)
-                    .setLabel('3')
-                    .setStyle(ButtonStyle.Danger),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_4`)
-                    .setLabel('4')
-                    .setStyle(ButtonStyle.Secondary),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_5`)
-                    .setLabel('5')
-                    .setStyle(ButtonStyle.Secondary)
-            );
-
-            const ratingRow2 = new ActionRowBuilder().addComponents(
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_6`)
-                    .setLabel('6')
-                    .setStyle(ButtonStyle.Secondary),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_7`)
-                    .setLabel('7')
-                    .setStyle(ButtonStyle.Primary),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_8`)
-                    .setLabel('8')
-                    .setStyle(ButtonStyle.Primary),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_9`)
-                    .setLabel('9')
-                    .setStyle(ButtonStyle.Success),
-                new ButtonBuilder()
-                    .setCustomId(`ticket_rate_10`)
-                    .setLabel('10')
-                    .setStyle(ButtonStyle.Success)
-            );
-
-            await interaction.editReply({ embeds: [ratingEmbed], components: [ratingRow, ratingRow2] });
-
-            // Supprimer le salon après 60 secondes
+            // Supprimer le salon après 10 secondes
             setTimeout(async () => {
                 try {
                     await channel.delete();
                 } catch (error) {
                     Logger.error('Erreur lors de la suppression du salon', error);
                 }
-            }, 60000);
+            }, 10000);
 
         } catch (error) {
             Logger.error('Erreur lors de la fermeture du ticket', error);
