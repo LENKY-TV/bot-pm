@@ -79,7 +79,7 @@ async function startBot() {
         // Se connecter à Discord
         await client.login(config.token);
 
-        // Démarrer le scheduler (dispatch à 20h55)
+        // Démarrer le scheduler (dispatch 8h/18h/20h50)
         startScheduler(client);
 
         Logger.info('Bot démarré avec succès !');

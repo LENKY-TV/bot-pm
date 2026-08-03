@@ -6,10 +6,11 @@ const Logger = require('./logger');
 let client = null;
 let dispatchAdminId = null;
 let lastDate = null;
-let lastDispatchMsgId = null;
 
 const DISPATCH_CHANNEL_ID = '1500956378334761090';
 const DISPATCH_ROLE_ID = '1489721198073090078';
+const RECAP_CHANNEL_ID = '1489721606505889873';
+const RECAP_USER_IDS = ['1528157366883844277', '1086766492873404499'];
 
 const SANCTIONS = [
     '1533118103762894949',
@@ -28,26 +29,44 @@ function setDispatchAdmin(userId) {
     dispatchAdminId = userId;
 }
 
+function getParisTime() {
+    return new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
+}
+
+function getParisHours() {
+    return parseInt(new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', hour: 'numeric', hour12: false }));
+}
+
+function getParisMinutes() {
+    return parseInt(new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris', minute: 'numeric' }));
+}
+
+function getParisDate() {
+    return new Date().toLocaleDateString('fr-FR', { timeZone: 'Europe/Paris' });
+}
+
 function checkScheduledTasks() {
     if (!client) return;
 
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const today = now.toDateString();
+    const hours = getParisHours();
+    const minutes = getParisMinutes();
+    const today = getParisDate();
 
     if (today === lastDate) return;
 
+    // Dispatch à 8h00 (heure de Paris)
     if (hours === 8 && minutes === 0) {
         lastDate = today;
         sendDispatch();
     }
 
+    // Rappel à 18h00 (heure de Paris)
     if (hours === 18 && minutes === 0) {
         lastDate = today;
         sendDispatchReminder();
     }
 
+    // Résumé + sanctions à 20h50 (heure de Paris)
     if (hours === 20 && minutes === 50) {
         lastDate = today;
         sendDispatchSummaryAndSanctions();
@@ -79,47 +98,12 @@ N'oubliez pas de confirmer votre présence !
     }
 }
 
-async function sendDispatchDM() {
-    if (!dispatchAdminId) return;
-
-    try {
-        const guild = client.guilds.cache.first();
-        if (!guild) return;
-
-        const allMembers = guild.members.cache.filter(m => !m.user.bot);
-        const memberList = allMembers.map(m => `• ${m.user.username}`).join('\n') || 'Aucun membre';
-
-        const embed = new EmbedBuilder()
-            .setTitle('📋 ・Liste des agents - Dispatch')
-            .setDescription(
-                `> *Récapitulatif avant clôture*\n\n` +
-                `**━━━━━━━━━━━━━━━━━━━━━━━━━━━**\n\n` +
-                `👷 **Agents concernés** ・ \`${allMembers.size}\`\n\n` +
-                `${memberList}\n\n` +
-                `**━━━━━━━━━━━━━━━━━━━━━━━━━━━**\n\n` +
-                `> 📅 \`${new Date().toLocaleDateString('fr-FR')}\` ・ 🕐 \`${new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}\``
-            )
-            .setColor('#1a1a2e')
-            .setFooter({ text: '• Clôture des présences à 21h30' })
-            .setTimestamp();
-
-        const admin = await client.users.fetch(dispatchAdminId);
-        if (admin) {
-            await admin.send({ embeds: [embed] });
-            Logger.info('MP dispatch envoyé à 20h50');
-        }
-    } catch (error) {
-        Logger.error('Erreur envoi MP dispatch', error);
-    }
-}
-
 async function sendDispatch() {
     try {
         const channel = await client.channels.fetch(DISPATCH_CHANNEL_ID);
         if (!channel) return;
 
-        const now = new Date();
-        const dateStr = now.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        const dateStr = new Date().toLocaleDateString('fr-FR', { timeZone: 'Europe/Paris', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
         const embed = EmbedUtils.create(channel.guild.id, {
             title: '🚨 Dispatch - POLICE MUNICIPALE PARIS 75',
@@ -172,8 +156,6 @@ Merci de votre collaboration et de votre vigilance pour assurer une couverture o
             timestamp: Date.now()
         });
 
-        lastDispatchMsgId = msg.id;
-
         Logger.info('Dispatch envoyé à 8h');
     } catch (error) {
         Logger.error('Erreur envoi dispatch', error);
@@ -191,11 +173,9 @@ async function sendDispatchSummaryAndSanctions() {
             const channel = guild.channels.cache.get(data.channelId);
             if (!channel) continue;
 
-            // Récupérer le rôle dispatch
             const dispatchRole = guild.roles.cache.get(DISPATCH_ROLE_ID);
             if (!dispatchRole) continue;
 
-            // Tous les membres avec le rôle dispatch (hors bots)
             const allMembers = dispatchRole.members.filter(m => !m.user.bot);
             const allMemberIds = allMembers.map(m => m.id);
 
@@ -223,8 +203,7 @@ async function sendDispatchSummaryAndSanctions() {
                 }).join('\n');
             };
 
-            const now = new Date();
-            const dateStr = now.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            const dateStr = new Date().toLocaleDateString('fr-FR', { timeZone: 'Europe/Paris', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
             const summaryEmbed = EmbedUtils.create(guild.id, {
                 title: `📋 Résumé Dispatch - ${dateStr}`,
@@ -239,16 +218,39 @@ async function sendDispatchSummaryAndSanctions() {
                 footer: { text: 'Police Municipale de Paris - Résumé automatique' }
             });
 
+            // Envoyer dans le salon dispatch
             await channel.send({ content: `<@&${DISPATCH_ROLE_ID}>`, embeds: [summaryEmbed] });
+
+            // Envoyer dans le salon récap
+            try {
+                const recapChannel = await client.channels.fetch(RECAP_CHANNEL_ID);
+                if (recapChannel) {
+                    await recapChannel.send({ embeds: [summaryEmbed] });
+                }
+            } catch (e) {
+                Logger.error('Erreur envoi récap salon', e);
+            }
+
+            // Envoyer en MP aux utilisateurs spécifiques
+            for (const userId of RECAP_USER_IDS) {
+                try {
+                    const user = await client.users.fetch(userId);
+                    if (user) {
+                        await user.send({ embeds: [summaryEmbed] });
+                    }
+                } catch (e) {
+                    Logger.error(`Erreur envoi MP à ${userId}`, e);
+                }
+            }
+
             Logger.info(`Résumé dispatch envoyé dans #${channel.name}`);
 
-            // Appliquer les sanctions aux non-répondants
+            // Appliquer les sanctions
             for (const userId of noResponse) {
                 try {
                     const member = guild.members.cache.get(userId);
                     if (!member) continue;
 
-                    // Vérifier quelles sanctions le membre a déjà
                     let nextSanctionIndex = 0;
                     for (let i = 0; i < SANCTIONS.length; i++) {
                         if (member.roles.cache.has(SANCTIONS[i])) {
@@ -256,15 +258,13 @@ async function sendDispatchSummaryAndSanctions() {
                         }
                     }
 
-                    // Appliquer la sanction suivante
                     if (nextSanctionIndex < SANCTIONS.length) {
                         const newRoleId = SANCTIONS[nextSanctionIndex];
                         if (!member.roles.cache.has(newRoleId)) {
                             await member.roles.add(newRoleId);
-                            Logger.info(`Sanction ${nextSanctionIndex + 1} appliquée à ${member.user.tag} (absence dispatch)`);
+                            Logger.info(`Sanction ${nextSanctionIndex + 1} appliquée à ${member.user.tag}`);
                         }
-                    } else if (nextSanctionIndex >= SANCTIONS.length) {
-                        // Sanction maximale atteinte → excluir du serveur
+                    } else {
                         if (!member.roles.cache.has(SANCTION_FINAL_ROLE)) {
                             await member.roles.add(SANCTION_FINAL_ROLE);
                             Logger.info(`Rôle d'exclusion ajouté à ${member.user.tag}`);
