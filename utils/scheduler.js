@@ -66,8 +66,8 @@ function checkScheduledTasks() {
         sendDispatchReminder();
     }
 
-    // Résumé + sanctions à 20h50 (heure de Paris)
-    if (hours === 20 && minutes === 50) {
+    // Résumé + sanctions à 21h00 (heure de Paris)
+    if (hours === 21 && minutes === 0) {
         lastDate = today;
         sendDispatchSummaryAndSanctions();
     }
