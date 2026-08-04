@@ -28,7 +28,7 @@ function saveResponse(messageId, data) {
 
 function loadResponses() {
     try {
-        const today = new Date().toISOString().slice(0, 10);
+        const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' });
         const rows = all('SELECT * FROM dispatch_responses WHERE dispatch_date = ?', [today]);
         for (const row of rows) {
             dispatchResponses.set(row.message_id, {

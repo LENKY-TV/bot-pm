@@ -1,11 +1,15 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { responses, loadResponses, saveResponse } = require('./dispatchTracker');
+const { responses, loadResponses, setAndSave } = require('./dispatchTracker');
 const EmbedUtils = require('./embedBuilder');
 const Logger = require('./logger');
 
 let client = null;
 let dispatchAdminId = null;
-let lastDate = null;
+
+// Tracking séparé pour chaque tâche
+let dispatchSentDate = null;
+let reminderSentDate = null;
+let summarySentDate = null;
 
 const DISPATCH_CHANNEL_ID = '1500956378334761090';
 const DISPATCH_ROLE_ID = '1489721198073090078';
@@ -27,14 +31,11 @@ function startScheduler(discordClient) {
     loadResponses();
 
     setInterval(checkScheduledTasks, 30000);
+    Logger.info('[Scheduler] Vérification toutes les 30s');
 }
 
 function setDispatchAdmin(userId) {
     dispatchAdminId = userId;
-}
-
-function getParisTime() {
-    return new Date().toLocaleString('fr-FR', { timeZone: 'Europe/Paris' });
 }
 
 function getParisHours() {
@@ -56,26 +57,29 @@ function checkScheduledTasks() {
     const minutes = getParisMinutes();
     const today = getParisDate();
 
-    // Reset lastDate si on change de jour
-    if (lastDate && lastDate !== today) {
-        lastDate = null;
-    }
+    // Reset les dates si on change de jour
+    if (dispatchSentDate && dispatchSentDate !== today) dispatchSentDate = null;
+    if (reminderSentDate && reminderSentDate !== today) reminderSentDate = null;
+    if (summarySentDate && summarySentDate !== today) summarySentDate = null;
 
-    // Dispatch à 8h00 (heure de Paris)
-    if (hours === 8 && minutes === 0 && lastDate !== today) {
-        lastDate = today;
+    // Dispatch à 8h00
+    if (hours === 8 && minutes === 0 && dispatchSentDate !== today) {
+        dispatchSentDate = today;
+        Logger.info('[Scheduler] Déclenchement dispatch 8h');
         sendDispatch();
     }
 
-    // Rappel à 18h00 (heure de Paris)
-    if (hours === 18 && minutes === 0 && lastDate !== today) {
-        lastDate = today;
+    // Rappel à 18h00
+    if (hours === 18 && minutes === 0 && reminderSentDate !== today) {
+        reminderSentDate = today;
+        Logger.info('[Scheduler] Déclenchement rappel 18h');
         sendDispatchReminder();
     }
 
-    // Résumé + sanctions à 21h00 (heure de Paris)
-    if (hours === 21 && minutes === 0 && lastDate !== today) {
-        lastDate = today;
+    // Résumé + sanctions à 21h00
+    if (hours === 21 && minutes === 0 && summarySentDate !== today) {
+        summarySentDate = today;
+        Logger.info('[Scheduler] Déclenchement résumé+sanctions 21h');
         sendDispatchSummaryAndSanctions();
     }
 }
@@ -83,7 +87,10 @@ function checkScheduledTasks() {
 async function sendDispatchReminder() {
     try {
         const channel = await client.channels.fetch(DISPATCH_CHANNEL_ID);
-        if (!channel) return;
+        if (!channel) {
+            Logger.error('[Scheduler] Salon dispatch introuvable');
+            return;
+        }
 
         const embed = EmbedUtils.create(channel.guild.id, {
             title: '⏰ Rappel Dispatch - POLICE MUNICIPALE PARIS 75',
@@ -99,16 +106,19 @@ N'oubliez pas de confirmer votre présence !
         });
 
         await channel.send({ content: `<@&${DISPATCH_ROLE_ID}>`, embeds: [embed] });
-        Logger.info('Rappel dispatch envoyé à 18h');
+        Logger.info('[Scheduler] Rappel dispatch envoyé à 18h');
     } catch (error) {
-        Logger.error('Erreur envoi rappel dispatch', error);
+        Logger.error('[Scheduler] Erreur envoi rappel dispatch', error);
     }
 }
 
 async function sendDispatch() {
     try {
         const channel = await client.channels.fetch(DISPATCH_CHANNEL_ID);
-        if (!channel) return;
+        if (!channel) {
+            Logger.error('[Scheduler] Salon dispatch introuvable');
+            return;
+        }
 
         const dateStr = new Date().toLocaleDateString('fr-FR', { timeZone: 'Europe/Paris', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -168,9 +178,9 @@ Merci de votre collaboration et de votre vigilance pour assurer une couverture o
 
         setAndSave(msg.id, data);
 
-        Logger.info('Dispatch envoyé à 8h');
+        Logger.info(`[Scheduler] Dispatch envoyé à 8h (message ID: ${msg.id})`);
     } catch (error) {
-        Logger.error('Erreur envoi dispatch', error);
+        Logger.error('[Scheduler] Erreur envoi dispatch', error);
     }
 }
 
@@ -178,6 +188,11 @@ async function sendDispatchSummaryAndSanctions() {
     if (!client) return;
 
     Logger.info(`[Dispatch] Début résumé et sanctions. ${responses.size} dispatch(es) en mémoire.`);
+
+    if (responses.size === 0) {
+        Logger.warn('[Dispatch] Aucun dispatch en mémoire! Le dispatch de 8h a-t-il été envoyé?');
+        return;
+    }
 
     for (const [messageId, data] of responses.entries()) {
         try {
@@ -255,21 +270,24 @@ async function sendDispatchSummaryAndSanctions() {
                 if (recapChannel) {
                     await recapChannel.send({ embeds: [summaryEmbed] });
                     Logger.info(`[Dispatch] Récap envoyé dans #${recapChannel.name}`);
+                } else {
+                    Logger.error(`[Dispatch] Salon récap ${RECAP_CHANNEL_ID} introuvable`);
                 }
             } catch (e) {
-                Logger.error('Erreur envoi récap salon', e);
+                Logger.error('[Dispatch] Erreur envoi récap salon', e);
             }
 
             // Envoyer en MP aux utilisateurs spécifiques
             for (const userId of RECAP_USER_IDS) {
                 try {
+                    Logger.info(`[Dispatch] Tentative MP à ${userId}...`);
                     const user = await client.users.fetch(userId);
                     if (user) {
                         await user.send({ embeds: [summaryEmbed] });
-                        Logger.info(`[Dispatch] MP envoyé à ${user.tag}`);
+                        Logger.info(`[Dispatch] MP envoyé à ${user.tag} (${userId})`);
                     }
                 } catch (e) {
-                    Logger.error(`Erreur envoi MP à ${userId}`, e);
+                    Logger.error(`[Dispatch] Erreur envoi MP à ${userId}: ${e.message}`);
                 }
             }
 
@@ -279,42 +297,57 @@ async function sendDispatchSummaryAndSanctions() {
                 try {
                     const member = guild.members.cache.get(userId);
                     if (!member) {
-                        Logger.error(`[Dispatch] Membre ${userId} introuvable dans le cache`);
+                        Logger.warn(`[Dispatch] Membre ${userId} introuvable dans le cache, tentative fetch...`);
+                        try {
+                            const fetchedMember = await guild.members.fetch(userId);
+                            if (fetchedMember) {
+                                await applySanction(fetchedMember, userId);
+                            }
+                        } catch (fetchErr) {
+                            Logger.error(`[Dispatch] Impossible de fetch le membre ${userId}: ${fetchErr.message}`);
+                        }
                         continue;
                     }
 
-                    let nextSanctionIndex = 0;
-                    for (let i = 0; i < SANCTIONS.length; i++) {
-                        if (member.roles.cache.has(SANCTIONS[i])) {
-                            nextSanctionIndex = i + 1;
-                        }
-                    }
-
-                    if (nextSanctionIndex < SANCTIONS.length) {
-                        const newRoleId = SANCTIONS[nextSanctionIndex];
-                        if (!member.roles.cache.has(newRoleId)) {
-                            await member.roles.add(newRoleId);
-                            Logger.info(`[Dispatch] Sanction ${nextSanctionIndex + 1} appliquée à ${member.user.tag}`);
-                        }
-                    } else {
-                        if (!member.roles.cache.has(SANCTION_FINAL_ROLE)) {
-                            await member.roles.add(SANCTION_FINAL_ROLE);
-                            Logger.info(`[Dispatch] Rôle d'exclusion ajouté à ${member.user.tag}`);
-                        }
-                    }
+                    await applySanction(member, userId);
                 } catch (error) {
-                    Logger.error(`Erreur sanction pour ${userId}`, error);
+                    Logger.error(`[Dispatch] Erreur sanction pour ${userId}: ${error.message}`);
                 }
             }
 
         } catch (error) {
-            Logger.error('Erreur résumé dispatch', error);
+            Logger.error('[Dispatch] Erreur résumé dispatch', error);
         }
     }
 
     responses.clear();
+    Logger.info('[Dispatch] Mémoire nettoyée');
 }
 
-const { setAndSave } = require('./dispatchTracker');
+async function applySanction(member, userId) {
+    let nextSanctionIndex = 0;
+    for (let i = 0; i < SANCTIONS.length; i++) {
+        if (member.roles.cache.has(SANCTIONS[i])) {
+            nextSanctionIndex = i + 1;
+        }
+    }
+
+    if (nextSanctionIndex < SANCTIONS.length) {
+        const newRoleId = SANCTIONS[nextSanctionIndex];
+        if (!member.roles.cache.has(newRoleId)) {
+            await member.roles.add(newRoleId);
+            Logger.info(`[Dispatch] Sanction ${nextSanctionIndex + 1} appliquée à ${member.user.tag}`);
+        } else {
+            Logger.info(`[Dispatch] ${member.user.tag} a déjà la sanction ${nextSanctionIndex + 1}`);
+        }
+    } else {
+        if (!member.roles.cache.has(SANCTION_FINAL_ROLE)) {
+            await member.roles.add(SANCTION_FINAL_ROLE);
+            Logger.info(`[Dispatch] Rôle d'exclusion ajouté à ${member.user.tag}`);
+        } else {
+            Logger.info(`[Dispatch] ${member.user.tag} a déjà le rôle d'exclusion`);
+        }
+    }
+}
 
 module.exports = { startScheduler, setDispatchAdmin };
