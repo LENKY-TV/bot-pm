@@ -38,7 +38,18 @@ class ButtonHandler {
      * Exécute un bouton
      */
     async executeButton(interaction) {
-        const button = this.buttons.get(interaction.customId);
+        let button = this.buttons.get(interaction.customId);
+
+        // Match prefix pour les IDs dynamiques (ex: absence_approve_123)
+        if (!button) {
+            for (const [key, btn] of this.buttons.entries()) {
+                if (interaction.customId.startsWith(key) && key.length > 0) {
+                    button = btn;
+                    break;
+                }
+            }
+        }
+
         if (!button) return;
 
         // Vérifier le cooldown
