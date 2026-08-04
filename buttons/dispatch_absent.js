@@ -4,7 +4,7 @@
  */
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { responses } = require('../utils/dispatchTracker');
+const { responses, setAndSave, saveResponse } = require('../utils/dispatchTracker');
 const Logger = require('../utils/logger');
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
         const messageId = interaction.message.id;
 
         if (!responses.has(messageId)) {
-            responses.set(messageId, { present: [], retard: [], absent: [], channelId: interaction.channel.id, guildId: interaction.guild.id });
+            setAndSave(messageId, { present: [], retard: [], absent: [], channelId: interaction.channel.id, guildId: interaction.guild.id, dispatchDate: new Date().toISOString().slice(0, 10) });
         }
 
         const data = responses.get(messageId);
@@ -27,6 +27,8 @@ module.exports = {
         if (!data.absent.includes(userId)) {
             data.absent.push(userId);
         }
+
+        saveResponse(messageId, data);
 
         // Mettre à jour les boutons avec les compteurs
         const row = new ActionRowBuilder().addComponents(

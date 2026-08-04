@@ -1,5 +1,5 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require('discord.js');
-const { responses } = require('../utils/dispatchTracker');
+const { responses, setAndSave, saveResponse } = require('../utils/dispatchTracker');
 const Logger = require('../utils/logger');
 
 module.exports = {
@@ -34,6 +34,8 @@ module.exports = {
 
         if (!data.retardJustifications) data.retardJustifications = {};
         data.retardJustifications[userId] = { reason, arrivalTime };
+
+        saveResponse(foundMessageId, data);
 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()

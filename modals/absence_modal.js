@@ -2,6 +2,8 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('
 const AbsenceModel = require('../models/Absence');
 const Logger = require('../utils/logger');
 
+const ABSENCE_CHANNEL_ID = '1533189810230005941';
+
 module.exports = {
     customId: 'absence_modal',
 
@@ -37,11 +39,8 @@ module.exports = {
 
         await interaction.reply({ embeds: [embed], ephemeral: true });
 
-        // Notify admins
+        // Notify admins in the specific absence channel
         try {
-            const adminRole = interaction.guild.roles.cache.find(r => r.permissions.has('Administrator'));
-            const adminChannel = interaction.guild.channels.cache.find(c => c.name.includes('admin') || c.name.includes('staff') || c.name.includes('log'));
-            
             const notifEmbed = new EmbedBuilder()
                 .setTitle('📩 ・Nouvelle demande d\'absence')
                 .setDescription(
@@ -68,14 +67,12 @@ module.exports = {
                     .setEmoji('❌')
             );
 
-            const logChannel = interaction.guild.channels.cache.find(c => c.name.includes('log') || c.name.includes('absence'));
-            if (logChannel) {
-                const msg = await logChannel.send({ 
-                    content: adminRole ? `<@&${adminRole.id}>` : null,
-                    embeds: [notifEmbed], 
-                    components: [row] 
-                });
-                AbsenceModel.create({ ...AbsenceModel.getById(result.lastInsertRowid), message_id: msg.id });
+            const absenceChannel = await client.channels.fetch(ABSENCE_CHANNEL_ID);
+            if (absenceChannel) {
+                const msg = await absenceChannel.send({ embeds: [notifEmbed], components: [row] });
+                Logger.info(`[Absence] Notification envoyée dans #${absenceChannel.name}`);
+            } else {
+                Logger.error(`[Absence] Salon ${ABSENCE_CHANNEL_ID} introuvable`);
             }
         } catch (error) {
             Logger.error('Erreur notification absence', error);

@@ -249,6 +249,19 @@ function createTables() {
         pause_start TEXT DEFAULT NULL
     )`);
 
+    db.run(`CREATE TABLE IF NOT EXISTS dispatch_responses (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        guild_id TEXT NOT NULL,
+        channel_id TEXT NOT NULL,
+        message_id TEXT NOT NULL UNIQUE,
+        present TEXT DEFAULT '[]',
+        retard TEXT DEFAULT '[]',
+        absent TEXT DEFAULT '[]',
+        retard_justifications TEXT DEFAULT '{}',
+        dispatch_date TEXT NOT NULL,
+        created_at TEXT DEFAULT (datetime('now'))
+    )`);
+
     db.run(`CREATE TABLE IF NOT EXISTS absences (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         guild_id TEXT NOT NULL,

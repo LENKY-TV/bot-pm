@@ -1,5 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { responses } = require('./dispatchTracker');
+const { responses, loadResponses, saveResponse } = require('./dispatchTracker');
 const EmbedUtils = require('./embedBuilder');
 const Logger = require('./logger');
 
@@ -22,6 +22,10 @@ const SANCTION_FINAL_ROLE = '1489721268378009831';
 function startScheduler(discordClient) {
     client = discordClient;
     Logger.info('Scheduler démarré');
+
+    // Charger les réponses du jour depuis la DB
+    loadResponses();
+
     setInterval(checkScheduledTasks, 30000);
 }
 
@@ -52,22 +56,25 @@ function checkScheduledTasks() {
     const minutes = getParisMinutes();
     const today = getParisDate();
 
-    if (today === lastDate) return;
+    // Reset lastDate si on change de jour
+    if (lastDate && lastDate !== today) {
+        lastDate = null;
+    }
 
     // Dispatch à 8h00 (heure de Paris)
-    if (hours === 8 && minutes === 0) {
+    if (hours === 8 && minutes === 0 && lastDate !== today) {
         lastDate = today;
         sendDispatch();
     }
 
     // Rappel à 18h00 (heure de Paris)
-    if (hours === 18 && minutes === 0) {
+    if (hours === 18 && minutes === 0 && lastDate !== today) {
         lastDate = today;
         sendDispatchReminder();
     }
 
     // Résumé + sanctions à 21h00 (heure de Paris)
-    if (hours === 21 && minutes === 0) {
+    if (hours === 21 && minutes === 0 && lastDate !== today) {
         lastDate = today;
         sendDispatchSummaryAndSanctions();
     }
@@ -146,15 +153,20 @@ Merci de votre collaboration et de votre vigilance pour assurer une couverture o
 
         const msg = await channel.send({ content: `<@&${DISPATCH_ROLE_ID}>`, embeds: [embed], components: [row] });
 
-        responses.set(msg.id, {
+        const dispatchDate = new Date().toISOString().slice(0, 10);
+        const data = {
             guildId: channel.guild.id,
             channelId: channel.id,
             messageId: msg.id,
             present: [],
             retard: [],
             absent: [],
+            retardJustifications: {},
+            dispatchDate: dispatchDate,
             timestamp: Date.now()
-        });
+        };
+
+        setAndSave(msg.id, data);
 
         Logger.info('Dispatch envoyé à 8h');
     } catch (error) {
@@ -165,22 +177,37 @@ Merci de votre collaboration et de votre vigilance pour assurer une couverture o
 async function sendDispatchSummaryAndSanctions() {
     if (!client) return;
 
+    Logger.info(`[Dispatch] Début résumé et sanctions. ${responses.size} dispatch(es) en mémoire.`);
+
     for (const [messageId, data] of responses.entries()) {
         try {
             const guild = client.guilds.cache.get(data.guildId);
-            if (!guild) continue;
+            if (!guild) {
+                Logger.error(`[Dispatch] Guild ${data.guildId} introuvable`);
+                continue;
+            }
 
             const channel = guild.channels.cache.get(data.channelId);
-            if (!channel) continue;
+            if (!channel) {
+                Logger.error(`[Dispatch] Channel ${data.channelId} introuvable`);
+                continue;
+            }
 
             const dispatchRole = guild.roles.cache.get(DISPATCH_ROLE_ID);
-            if (!dispatchRole) continue;
+            if (!dispatchRole) {
+                Logger.error(`[Dispatch] Rôle dispatch ${DISPATCH_ROLE_ID} introuvable`);
+                continue;
+            }
 
             const allMembers = dispatchRole.members.filter(m => !m.user.bot);
             const allMemberIds = allMembers.map(m => m.id);
 
+            Logger.info(`[Dispatch] ${allMemberIds.length} membres avec le rôle dispatch`);
+
             const responded = new Set([...data.present, ...data.retard, ...data.absent]);
             const noResponse = allMemberIds.filter(id => !responded.has(id));
+
+            Logger.info(`[Dispatch] Présents: ${data.present.length}, Retards: ${data.retard.length}, Absents: ${data.absent.length}, Pas de réponse: ${noResponse.length}`);
 
             const formatList = (arr, emoji, justifications = null) => {
                 if (arr.length === 0) return 'Aucun';
@@ -220,12 +247,14 @@ async function sendDispatchSummaryAndSanctions() {
 
             // Envoyer dans le salon dispatch
             await channel.send({ content: `<@&${DISPATCH_ROLE_ID}>`, embeds: [summaryEmbed] });
+            Logger.info(`[Dispatch] Résumé envoyé dans #${channel.name}`);
 
             // Envoyer dans le salon récap
             try {
                 const recapChannel = await client.channels.fetch(RECAP_CHANNEL_ID);
                 if (recapChannel) {
                     await recapChannel.send({ embeds: [summaryEmbed] });
+                    Logger.info(`[Dispatch] Récap envoyé dans #${recapChannel.name}`);
                 }
             } catch (e) {
                 Logger.error('Erreur envoi récap salon', e);
@@ -237,19 +266,22 @@ async function sendDispatchSummaryAndSanctions() {
                     const user = await client.users.fetch(userId);
                     if (user) {
                         await user.send({ embeds: [summaryEmbed] });
+                        Logger.info(`[Dispatch] MP envoyé à ${user.tag}`);
                     }
                 } catch (e) {
                     Logger.error(`Erreur envoi MP à ${userId}`, e);
                 }
             }
 
-            Logger.info(`Résumé dispatch envoyé dans #${channel.name}`);
-
             // Appliquer les sanctions
+            Logger.info(`[Dispatch] Application des sanctions pour ${noResponse.length} personne(s)...`);
             for (const userId of noResponse) {
                 try {
                     const member = guild.members.cache.get(userId);
-                    if (!member) continue;
+                    if (!member) {
+                        Logger.error(`[Dispatch] Membre ${userId} introuvable dans le cache`);
+                        continue;
+                    }
 
                     let nextSanctionIndex = 0;
                     for (let i = 0; i < SANCTIONS.length; i++) {
@@ -262,12 +294,12 @@ async function sendDispatchSummaryAndSanctions() {
                         const newRoleId = SANCTIONS[nextSanctionIndex];
                         if (!member.roles.cache.has(newRoleId)) {
                             await member.roles.add(newRoleId);
-                            Logger.info(`Sanction ${nextSanctionIndex + 1} appliquée à ${member.user.tag}`);
+                            Logger.info(`[Dispatch] Sanction ${nextSanctionIndex + 1} appliquée à ${member.user.tag}`);
                         }
                     } else {
                         if (!member.roles.cache.has(SANCTION_FINAL_ROLE)) {
                             await member.roles.add(SANCTION_FINAL_ROLE);
-                            Logger.info(`Rôle d'exclusion ajouté à ${member.user.tag}`);
+                            Logger.info(`[Dispatch] Rôle d'exclusion ajouté à ${member.user.tag}`);
                         }
                     }
                 } catch (error) {
@@ -282,5 +314,7 @@ async function sendDispatchSummaryAndSanctions() {
 
     responses.clear();
 }
+
+const { setAndSave } = require('./dispatchTracker');
 
 module.exports = { startScheduler, setDispatchAdmin };
