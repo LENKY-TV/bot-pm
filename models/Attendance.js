@@ -4,6 +4,14 @@ function nowUTC() {
     return new Date().toISOString().replace('T', ' ').slice(0, 19);
 }
 
+function nowMs() {
+    return Date.now();
+}
+
+function parseToMs(dateStr) {
+    return new Date(dateStr.replace(' ', 'T') + 'Z').getTime();
+}
+
 class AttendanceModel {
     static clockIn(guildId, userId, serviceName) {
         const existing = get(
@@ -25,13 +33,13 @@ class AttendanceModel {
         );
         if (!record) return null;
 
-        const now = new Date();
-        const clockIn = new Date(record.clock_in.replace(' ', 'T') + 'Z');
-        let duration = Math.floor((now - clockIn) / 60000);
+        const now = nowMs();
+        const clockInMs = parseToMs(record.clock_in);
+        let duration = Math.floor((now - clockInMs) / 60000);
 
         if (record.on_pause && record.pause_start) {
-            const pauseStart = new Date(record.pause_start.replace(' ', 'T') + 'Z');
-            const pauseDuration = Math.floor((now - pauseStart) / 60000);
+            const pauseStartMs = parseToMs(record.pause_start);
+            const pauseDuration = Math.floor((now - pauseStartMs) / 60000);
             duration -= pauseDuration;
         }
 
@@ -58,11 +66,6 @@ class AttendanceModel {
                 [nowUTC(), record.id]
             );
         } else {
-            let pauseDuration = 0;
-            if (record.pause_start) {
-                const pauseStart = new Date(record.pause_start.replace(' ', 'T') + 'Z');
-                pauseDuration = Math.floor((new Date() - pauseStart) / 60000);
-            }
             run(
                 'UPDATE service_attendance SET on_pause = 0, pause_start = NULL WHERE id = ?',
                 [record.id]
@@ -119,7 +122,7 @@ class AttendanceModel {
         return all(
             `SELECT user_id, 
                     SUM(CASE 
-                        WHEN status = 'active' THEN CAST((julianday('now') - julianday(clock_in)) * 24 * 60 AS INTEGER)
+                        WHEN status = 'active' THEN CAST((strftime('%s', 'now') - strftime('%s', clock_in)) / 60 AS INTEGER)
                         WHEN duration IS NOT NULL THEN duration 
                         ELSE 0 
                     END) as total_minutes,
@@ -136,7 +139,7 @@ class AttendanceModel {
         return all(
             `SELECT service_name,
                     SUM(CASE 
-                        WHEN status = 'active' THEN CAST((julianday('now') - julianday(clock_in)) * 24 * 60 AS INTEGER)
+                        WHEN status = 'active' THEN CAST((strftime('%s', 'now') - strftime('%s', clock_in)) / 60 AS INTEGER)
                         WHEN duration IS NOT NULL THEN duration 
                         ELSE 0 
                     END) as total_minutes,
