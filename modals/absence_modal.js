@@ -70,6 +70,7 @@ module.exports = {
             const absenceChannel = await client.channels.fetch(ABSENCE_CHANNEL_ID);
             if (absenceChannel) {
                 const msg = await absenceChannel.send({ embeds: [notifEmbed], components: [row] });
+                AbsenceModel.updateMessageId(result.lastInsertRowid, msg.id);
                 Logger.info(`[Absence] Notification envoyée dans #${absenceChannel.name}`);
             } else {
                 Logger.error(`[Absence] Salon ${ABSENCE_CHANNEL_ID} introuvable`);

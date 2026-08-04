@@ -257,7 +257,7 @@ async function sendDispatchSummaryAndSanctions() {
                     { name: `❓ Pas de réponse (${noResponse.length})`, value: formatNoResponse(noResponse), inline: false }
                 ],
                 color: '#FFD700',
-                footer: { text: 'Police Municipale de Paris - Résumé automatique' }
+                footer: 'Police Municipale de Paris - Résumé automatique'
             });
 
             // Envoyer dans le salon dispatch

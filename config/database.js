@@ -61,7 +61,14 @@ function run(sql, params = []) {
     const safeSql = buildQuery(sql, params);
     db.run(safeSql);
     saveDatabase();
-    return { changes: db.getRowsModified() };
+    let lastInsertRowid = null;
+    try {
+        const res = db.exec("SELECT last_insert_rowid()");
+        if (res.length > 0 && res[0].values.length > 0) {
+            lastInsertRowid = res[0].values[0][0];
+        }
+    } catch (e) {}
+    return { changes: db.getRowsModified(), lastInsertRowid };
 }
 
 function get(sql, params = []) {

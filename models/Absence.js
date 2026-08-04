@@ -28,6 +28,10 @@ class AbsenceModel {
         return run('UPDATE absences SET status = ?, reviewed_by = ? WHERE id = ?', ['rejected', reviewedBy, id]);
     }
 
+    static updateMessageId(id, messageId) {
+        return run('UPDATE absences SET message_id = ? WHERE id = ?', [messageId, id]);
+    }
+
     static isActive(guildId, userId) {
         const now = new Date().toISOString();
         return get(
