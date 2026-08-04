@@ -118,7 +118,11 @@ class AttendanceModel {
     static getWeeklyStats(guildId) {
         return all(
             `SELECT user_id, 
-                    SUM(CASE WHEN duration IS NOT NULL THEN duration ELSE 0 END) as total_minutes,
+                    SUM(CASE 
+                        WHEN status = 'active' THEN CAST((julianday('now') - julianday(clock_in)) * 24 * 60 AS INTEGER)
+                        WHEN duration IS NOT NULL THEN duration 
+                        ELSE 0 
+                    END) as total_minutes,
                     COUNT(*) as total_sessions
              FROM service_attendance 
              WHERE guild_id = ? AND clock_in >= datetime('now', '-7 days')
@@ -131,7 +135,11 @@ class AttendanceModel {
     static getWeeklyStatsByUser(guildId, userId) {
         return all(
             `SELECT service_name,
-                    SUM(CASE WHEN duration IS NOT NULL THEN duration ELSE 0 END) as total_minutes,
+                    SUM(CASE 
+                        WHEN status = 'active' THEN CAST((julianday('now') - julianday(clock_in)) * 24 * 60 AS INTEGER)
+                        WHEN duration IS NOT NULL THEN duration 
+                        ELSE 0 
+                    END) as total_minutes,
                     COUNT(*) as total_sessions
              FROM service_attendance 
              WHERE guild_id = ? AND user_id = ? AND clock_in >= datetime('now', '-7 days')
