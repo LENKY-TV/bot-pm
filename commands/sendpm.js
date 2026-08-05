@@ -2,7 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits, ChannelType } = require('disco
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('messagepm')
+        .setName('sendpm')
         .setDescription('Envoyer un message personnalisé')
         .addChannelOption(option =>
             option.setName('salon')
