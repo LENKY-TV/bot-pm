@@ -20,7 +20,7 @@ module.exports = {
 
         // Attendre la réponse avec l'image
         const filter = (m) => m.author.id === userId && m.channel.id === interaction.channel.id;
-        const collector = interaction.channel.createMessages({ filter, max: 1, time: 60000 });
+        const collector = interaction.channel.createMessageCollector({ filter, max: 1, time: 60000 });
 
         collector.on('collect', async (message) => {
             if (message.content.toLowerCase() === 'cancel') {
