@@ -14,19 +14,19 @@ module.exports = {
         const content = interaction.fields.getTextInputValue('nds_content');
         const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
 
-        let imageUrl = null;
+        // Récupérer les images depuis la DB
+        let imageUrls = [];
         try {
-            const { get } = require('../config/database');
+            const { get, run } = require('../config/database');
             const record = get('SELECT value FROM config WHERE guild_id = ? AND key = ?', [
                 interaction.guild.id,
-                `ndspm_image_${interaction.user.id}`
+                `ndspm_images_${interaction.user.id}`
             ]);
             if (record) {
-                imageUrl = record.value;
-                const { run } = require('../config/database');
+                imageUrls = JSON.parse(record.value);
                 run('DELETE FROM config WHERE guild_id = ? AND key = ?', [
                     interaction.guild.id,
-                    `ndspm_image_${interaction.user.id}`
+                    `ndspm_images_${interaction.user.id}`
                 ]);
             }
         } catch (e) {}
@@ -38,8 +38,9 @@ module.exports = {
             .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Ajoutez vos images en répondant au message' })
             .setTimestamp();
 
-        if (imageUrl) {
-            embed.setImage(imageUrl);
+        // Première image dans l'embed
+        if (imageUrls.length > 0) {
+            embed.setImage(imageUrls[0]);
         }
 
         const row = new ActionRowBuilder().addComponents(
@@ -58,6 +59,20 @@ module.exports = {
 
             const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row] });
 
+            // Envoyer les images restantes en tant que reply
+            if (imageUrls.length > 1) {
+                for (let i = 1; i < imageUrls.length; i++) {
+                    try {
+                        const imgEmbed = new EmbedBuilder()
+                            .setImage(imageUrls[i])
+                            .setColor(color);
+                        await msg.reply({ embeds: [imgEmbed] });
+                    } catch (e) {
+                        Logger.error(`[NDS] Erreur envoi image ${i + 1}`, e);
+                    }
+                }
+            }
+
             const data = {
                 guildId: interaction.guild.id,
                 channelId: channelId,
@@ -71,8 +86,8 @@ module.exports = {
             };
             saveResponse(msg.id, data);
 
-            await interaction.reply({ content: `✅ NDS envoyé dans <#${channelId}>`, ephemeral: true });
-            Logger.info(`[NDS] Envoyé dans #${channel.name}`);
+            await interaction.reply({ content: `✅ NDS envoyé dans <#${channelId}> (${imageUrls.length} image(s))`, ephemeral: true });
+            Logger.info(`[NDS] Envoyé dans #${channel.name} avec ${imageUrls.length} image(s)`);
         } catch (error) {
             Logger.error('[NDS] Erreur envoi', error);
             await interaction.reply({ content: '❌ Erreur lors de l\'envoi.', ephemeral: true });

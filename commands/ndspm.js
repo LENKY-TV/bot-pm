@@ -16,8 +16,23 @@ module.exports = {
                 .setRequired(true)
         )
         .addAttachmentOption(option =>
-            option.setName('image')
-                .setDescription('Image à joindre au NDS (optionnel)')
+            option.setName('image1')
+                .setDescription('Image 1')
+                .setRequired(false)
+        )
+        .addAttachmentOption(option =>
+            option.setName('image2')
+                .setDescription('Image 2')
+                .setRequired(false)
+        )
+        .addAttachmentOption(option =>
+            option.setName('image3')
+                .setDescription('Image 3')
+                .setRequired(false)
+        )
+        .addAttachmentOption(option =>
+            option.setName('image4')
+                .setDescription('Image 4')
                 .setRequired(false)
         )
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
@@ -27,14 +42,18 @@ module.exports = {
 
         const channel = interaction.options.getChannel('salon');
         const role = interaction.options.getString('role');
-        const image = interaction.options.getAttachment('image');
+        const image1 = interaction.options.getAttachment('image1');
+        const image2 = interaction.options.getAttachment('image2');
+        const image3 = interaction.options.getAttachment('image3');
+        const image4 = interaction.options.getAttachment('image4');
 
-        // Stocker l'URL de l'image temporairement
-        if (image) {
+        // Stocker les images en DB
+        const images = [image1, image2, image3, image4].filter(Boolean);
+        if (images.length > 0) {
             const { run } = require('../config/database');
             run(
                 'INSERT OR REPLACE INTO config (guild_id, key, value) VALUES (?, ?, ?)',
-                [interaction.guild.id, `ndspm_image_${interaction.user.id}`, image.url]
+                [interaction.guild.id, `ndspm_images_${interaction.user.id}`, JSON.stringify(images.map(i => i.url))]
             );
         }
 
