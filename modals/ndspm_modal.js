@@ -1,5 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { responses, saveResponse } = require('../utils/dispatchTracker');
+const { trackNdsMessage } = require('../events/messageCreate');
 const Logger = require('../utils/logger');
 
 module.exports = {
@@ -14,7 +15,6 @@ module.exports = {
         const content = interaction.fields.getTextInputValue('nds_content');
         const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
 
-        // Récupérer les images depuis la DB
         let imageUrls = [];
         try {
             const { get, run } = require('../config/database');
@@ -35,10 +35,9 @@ module.exports = {
             .setTitle(`📋 ・${title}`)
             .setDescription(content)
             .setColor(color)
-            .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Ajoutez vos images en répondant au message' })
+            .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Répondez avec une image pour l\'ajouter' })
             .setTimestamp();
 
-        // Première image dans l'embed
         if (imageUrls.length > 0) {
             embed.setImage(imageUrls[0]);
         }
@@ -59,7 +58,9 @@ module.exports = {
 
             const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row] });
 
-            // Envoyer les images restantes en tant que reply
+            // Tracker ce message NDS
+            trackNdsMessage(msg.id);
+
             if (imageUrls.length > 1) {
                 for (let i = 1; i < imageUrls.length; i++) {
                     try {

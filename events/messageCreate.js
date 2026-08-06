@@ -1,13 +1,19 @@
 /**
  * Event: messageCreate
- * Gestion des messages pour les statistiques
+ * Gestion des messages pour les statistiques + images NDS
  */
 
-const { Events } = require('discord.js');
+const { Events, EmbedBuilder } = require('discord.js');
 const TicketModel = require('../models/Ticket');
 const StaffModel = require('../models/Staff');
 const { run } = require('../config/database');
 const Logger = require('../utils/logger');
+
+const ndsMessageIds = new Set();
+
+function trackNdsMessage(messageId) {
+    ndsMessageIds.add(messageId);
+}
 
 module.exports = {
     name: Events.MessageCreate,
@@ -16,6 +22,35 @@ module.exports = {
     async execute(message, client) {
         if (message.author.bot) return;
 
+        // Vérifier si c'est une réponse à un NDS
+        if (message.reference && message.reference.messageId) {
+            const repliedId = message.reference.messageId;
+            if (ndsMessageIds.has(repliedId) && message.attachments.size > 0) {
+                try {
+                    const channel = message.channel;
+                    const ndsMsg = await channel.messages.fetch(repliedId);
+                    if (!ndsMsg || !ndsMsg.embeds[0]) return;
+
+                    const attachment = message.attachments.first();
+                    const validTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/webp'];
+                    if (!validTypes.includes(attachment.contentType)) {
+                        return message.reply('❌ Seules les images sont acceptées (PNG, JPG, GIF, WEBP).');
+                    }
+
+                    const originalEmbed = EmbedBuilder.from(ndsMsg.embeds[0]);
+                    originalEmbed.setImage(attachment.url);
+
+                    await ndsMsg.edit({ embeds: [originalEmbed] });
+                    await message.react('✅');
+                    Logger.info(`[NDS] Image ajoutée au NDS ${repliedId}`);
+                } catch (error) {
+                    Logger.error('[NDS] Erreur ajout image reply', error);
+                }
+                return;
+            }
+        }
+
+        // Statistiques tickets
         const ticket = TicketModel.getByChannel(message.channel.id);
         if (!ticket) return;
 
@@ -31,3 +66,5 @@ module.exports = {
         }
     }
 };
+
+module.exports.trackNdsMessage = trackNdsMessage;

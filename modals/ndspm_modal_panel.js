@@ -1,5 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { responses, saveResponse } = require('../utils/dispatchTracker');
+const { trackNdsMessage } = require('../events/messageCreate');
 const Logger = require('../utils/logger');
 
 module.exports = {
@@ -8,17 +9,17 @@ module.exports = {
     async execute(interaction, client) {
         const parts = interaction.customId.split('_');
         const channelId = parts[3];
+        const roleId = interaction.fields.getTextInputValue('nds_role');
 
         const title = interaction.fields.getTextInputValue('nds_title');
         const content = interaction.fields.getTextInputValue('nds_content');
-        const roleId = interaction.fields.getTextInputValue('nds_role');
         const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
 
         const embed = new EmbedBuilder()
             .setTitle(`📋 ・${title}`)
             .setDescription(content)
             .setColor(color)
-            .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Ajoutez vos images en répondant au message' })
+            .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Répondez avec une image pour l\'ajouter' })
             .setTimestamp();
 
         const row = new ActionRowBuilder().addComponents(
@@ -37,7 +38,8 @@ module.exports = {
 
             const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row] });
 
-            // Sauvegarder pour tracking
+            trackNdsMessage(msg.id);
+
             const data = {
                 guildId: interaction.guild.id,
                 channelId: channelId,
