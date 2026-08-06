@@ -37,10 +37,11 @@ module.exports = {
                         return message.reply('❌ Seules les images sont acceptées (PNG, JPG, GIF, WEBP).');
                     }
 
-                    const originalEmbed = EmbedBuilder.from(ndsMsg.embeds[0]);
-                    originalEmbed.setImage(attachment.url);
+                    const imgEmbed = new EmbedBuilder()
+                        .setImage(attachment.url)
+                        .setColor(ndsMsg.embeds[0].color || '#FF0000');
 
-                    await ndsMsg.edit({ embeds: [originalEmbed] });
+                    await ndsMsg.reply({ embeds: [imgEmbed] });
                     await message.react('✅');
                     Logger.info(`[NDS] Image ajoutée au NDS ${repliedId}`);
                 } catch (error) {
