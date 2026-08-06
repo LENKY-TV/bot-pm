@@ -37,7 +37,7 @@ module.exports = {
             .setTitle(`📋 ・${title}`)
             .setDescription(content)
             .setColor(color)
-            .setFooter({ text: '⚠️ Vous devez confirmer la lecture sous 48h' })
+            .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Ajoutez vos images en répondant au message' })
             .setTimestamp();
 
         if (imageUrl) {
@@ -49,9 +49,8 @@ module.exports = {
                 .setCustomId('ndspm_ack')
                 .setLabel('Lu et approuvé (0)')
                 .setStyle(ButtonStyle.Success)
-                .setEmoji('✅'),
-            new ButtonBuilder()
-                .setCustomId('ndspm_add_image')
+                .setEmoji('✅')
+        );
                 .setLabel('Joindre une image')
                 .setStyle(ButtonStyle.Secondary)
                 .setEmoji('🖼️')
