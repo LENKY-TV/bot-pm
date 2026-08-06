@@ -14,7 +14,6 @@ module.exports = {
         const content = interaction.fields.getTextInputValue('nds_content');
         const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
 
-        // Récupérer l'image depuis la DB
         let imageUrl = null;
         try {
             const { get } = require('../config/database');
@@ -24,7 +23,6 @@ module.exports = {
             ]);
             if (record) {
                 imageUrl = record.value;
-                // Supprimer après utilisation
                 const { run } = require('../config/database');
                 run('DELETE FROM config WHERE guild_id = ? AND key = ?', [
                     interaction.guild.id,
@@ -50,10 +48,6 @@ module.exports = {
                 .setLabel('Lu et approuvé (0)')
                 .setStyle(ButtonStyle.Success)
                 .setEmoji('✅')
-        );
-                .setLabel('Joindre une image')
-                .setStyle(ButtonStyle.Secondary)
-                .setEmoji('🖼️')
         );
 
         try {
