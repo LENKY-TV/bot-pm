@@ -12,6 +12,8 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
     async execute(interaction, client) {
+        await interaction.deferReply({ ephemeral: true });
+
         const channel = interaction.options.getChannel('salon');
 
         const embed = new EmbedBuilder()
@@ -35,6 +37,6 @@ module.exports = {
         );
 
         await channel.send({ embeds: [embed], components: [row] });
-        await interaction.reply({ content: `✅ Panel NDS déployé dans <#${channel.id}>`, ephemeral: true });
+        await interaction.editReply({ content: `✅ Panel NDS déployé dans <#${channel.id}>` });
     }
 };
