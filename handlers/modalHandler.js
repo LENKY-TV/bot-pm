@@ -39,9 +39,10 @@ class ModalHandler {
     async executeModal(interaction) {
         let modal = this.modals.get(interaction.customId);
         
-        // Si pas trouvé, chercher par prefix (pour les customIds dynamiques)
+        // Si pas trouvé, chercher par prefix (le plus long d'abord)
         if (!modal) {
-            for (const [key, value] of this.modals) {
+            const sorted = [...this.modals.entries()].sort((a, b) => b[0].length - a[0].length);
+            for (const [key, value] of sorted) {
                 if (interaction.customId.startsWith(key)) {
                     modal = value;
                     break;
