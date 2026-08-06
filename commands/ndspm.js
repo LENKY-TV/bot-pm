@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, ChannelType, AttachmentBuilder } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, ChannelType } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -12,7 +12,7 @@ module.exports = {
         )
         .addStringOption(option =>
             option.setName('role')
-                .setDescription('Rôle à ping')
+                .setDescription('ID du rôle à ping')
                 .setRequired(true)
         )
         .addAttachmentOption(option =>
@@ -29,8 +29,17 @@ module.exports = {
         const role = interaction.options.getString('role');
         const image = interaction.options.getAttachment('image');
 
+        // Stocker l'URL de l'image temporairement
+        if (image) {
+            const { run } = require('../config/database');
+            run(
+                'INSERT OR REPLACE INTO config (guild_id, key, value) VALUES (?, ?, ?)',
+                [interaction.guild.id, `ndspm_image_${interaction.user.id}`, image.url]
+            );
+        }
+
         const modal = new ModalBuilder()
-            .setCustomId(`ndspm_modal_${channel.id}_${role}${image ? '_' + image.url : ''}`)
+            .setCustomId(`ndspm_modal_${channel.id}_${role}`)
             .setTitle('📋・Note de Service');
 
         const titleInput = new TextInputBuilder()

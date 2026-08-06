@@ -1,4 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { responses, saveResponse } = require('../utils/dispatchTracker');
 const Logger = require('../utils/logger');
 
 module.exports = {
@@ -8,12 +9,29 @@ module.exports = {
         const parts = interaction.customId.split('_');
         const channelId = parts[2];
         const roleId = parts[3];
-        // L'image URL peut contenir des underscores, on la prend tout ce qui suit
-        const imageUrl = parts.length > 4 ? parts.slice(4).join('_') : null;
 
         const title = interaction.fields.getTextInputValue('nds_title');
         const content = interaction.fields.getTextInputValue('nds_content');
         const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
+
+        // Récupérer l'image depuis la DB
+        let imageUrl = null;
+        try {
+            const { get } = require('../config/database');
+            const record = get('SELECT value FROM config WHERE guild_id = ? AND key = ?', [
+                interaction.guild.id,
+                `ndspm_image_${interaction.user.id}`
+            ]);
+            if (record) {
+                imageUrl = record.value;
+                // Supprimer après utilisation
+                const { run } = require('../config/database');
+                run('DELETE FROM config WHERE guild_id = ? AND key = ?', [
+                    interaction.guild.id,
+                    `ndspm_image_${interaction.user.id}`
+                ]);
+            }
+        } catch (e) {}
 
         const embed = new EmbedBuilder()
             .setTitle(`📋 ・${title}`)
@@ -28,10 +46,15 @@ module.exports = {
 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()
-                .setCustomId(`ndspm_ack`)
-                .setLabel('Lu et approuvé')
+                .setCustomId('ndspm_ack')
+                .setLabel('Lu et approuvé (0)')
                 .setStyle(ButtonStyle.Success)
-                .setEmoji('✅')
+                .setEmoji('✅'),
+            new ButtonBuilder()
+                .setCustomId('ndspm_add_image')
+                .setLabel('Joindre une image')
+                .setStyle(ButtonStyle.Secondary)
+                .setEmoji('🖼️')
         );
 
         try {
@@ -42,21 +65,18 @@ module.exports = {
 
             const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row] });
 
-            // Sauvegarder le message ID pour tracking
-            const { run } = require('../config/database');
-            run(
-                'INSERT INTO dispatch_responses (guild_id, channel_id, message_id, present, retard, absent, retard_justifications, dispatch_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-                [
-                    interaction.guild.id,
-                    channelId,
-                    msg.id,
-                    JSON.stringify([]),
-                    JSON.stringify([]),
-                    JSON.stringify([]),
-                    JSON.stringify({}),
-                    `nds_${Date.now()}`
-                ]
-            );
+            const data = {
+                guildId: interaction.guild.id,
+                channelId: channelId,
+                messageId: msg.id,
+                present: [],
+                retard: [],
+                absent: [],
+                retardJustifications: {},
+                dispatchDate: `nds_${Date.now()}`,
+                timestamp: Date.now()
+            };
+            saveResponse(msg.id, data);
 
             await interaction.reply({ content: `✅ NDS envoyé dans <#${channelId}>`, ephemeral: true });
             Logger.info(`[NDS] Envoyé dans #${channel.name}`);
