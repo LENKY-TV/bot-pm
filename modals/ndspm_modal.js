@@ -1,4 +1,4 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
 const { responses, saveResponse } = require('../utils/dispatchTracker');
 const { trackNdsMessage } = require('../events/messageCreate');
 const Logger = require('../utils/logger');
@@ -57,22 +57,14 @@ module.exports = {
                 return interaction.reply({ content: '❌ Salon introuvable.', ephemeral: true });
             }
 
-            const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row] });
+            // Convertir les URLs en Attachments
+            const files = imageUrls.slice(1).map((url, i) => {
+                return new AttachmentBuilder(url, { name: `image_${i + 2}.png` });
+            });
+
+            const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row], files });
 
             trackNdsMessage(msg.id);
-
-            if (imageUrls.length > 1) {
-                for (let i = 1; i < imageUrls.length; i++) {
-                    try {
-                        const imgEmbed = new EmbedBuilder()
-                            .setImage(imageUrls[i])
-                            .setColor(color);
-                        await msg.reply({ embeds: [imgEmbed] });
-                    } catch (e) {
-                        Logger.error(`[NDS] Erreur envoi image ${i + 1}`, e);
-                    }
-                }
-            }
 
             const data = {
                 guildId: interaction.guild.id,
