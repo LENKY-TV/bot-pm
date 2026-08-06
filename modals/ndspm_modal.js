@@ -13,7 +13,8 @@ module.exports = {
 
         const title = interaction.fields.getTextInputValue('nds_title');
         const content = interaction.fields.getTextInputValue('nds_content');
-        const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
+        const inputColor = interaction.fields.getTextInputValue('nds_color');
+        const color = (inputColor && /^#[0-9A-Fa-f]{6}$/.test(inputColor)) ? inputColor : '#FF0000';
 
         let imageUrls = [];
         try {
@@ -58,7 +59,6 @@ module.exports = {
 
             const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row] });
 
-            // Tracker ce message NDS
             trackNdsMessage(msg.id);
 
             if (imageUrls.length > 1) {

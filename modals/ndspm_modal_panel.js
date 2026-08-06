@@ -13,7 +13,8 @@ module.exports = {
 
         const title = interaction.fields.getTextInputValue('nds_title');
         const content = interaction.fields.getTextInputValue('nds_content');
-        const color = interaction.fields.getTextInputValue('nds_color') || '#FF0000';
+        const inputColor = interaction.fields.getTextInputValue('nds_color');
+        const color = (inputColor && /^#[0-9A-Fa-f]{6}$/.test(inputColor)) ? inputColor : '#FF0000';
 
         const embed = new EmbedBuilder()
             .setTitle(`📋 ・${title}`)
