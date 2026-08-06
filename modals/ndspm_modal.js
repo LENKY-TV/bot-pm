@@ -7,7 +7,9 @@ module.exports = {
     async execute(interaction, client) {
         const parts = interaction.customId.split('_');
         const channelId = parts[2];
-        const roleId = parts.slice(3).join('_');
+        const roleId = parts[3];
+        // L'image URL peut contenir des underscores, on la prend tout ce qui suit
+        const imageUrl = parts.length > 4 ? parts.slice(4).join('_') : null;
 
         const title = interaction.fields.getTextInputValue('nds_title');
         const content = interaction.fields.getTextInputValue('nds_content');
@@ -19,6 +21,10 @@ module.exports = {
             .setColor(color)
             .setFooter({ text: '⚠️ Vous devez confirmer la lecture sous 48h' })
             .setTimestamp();
+
+        if (imageUrl) {
+            embed.setImage(imageUrl);
+        }
 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()
@@ -53,7 +59,7 @@ module.exports = {
             );
 
             await interaction.reply({ content: `✅ NDS envoyé dans <#${channelId}>`, ephemeral: true });
-            Logger.info(`[NDS] Envoyé dans #${channel.title}`);
+            Logger.info(`[NDS] Envoyé dans #${channel.name}`);
         } catch (error) {
             Logger.error('[NDS] Erreur envoi', error);
             await interaction.reply({ content: '❌ Erreur lors de l\'envoi.', ephemeral: true });

@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, ChannelType } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, ChannelType, AttachmentBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -15,6 +15,11 @@ module.exports = {
                 .setDescription('Rôle à ping')
                 .setRequired(true)
         )
+        .addAttachmentOption(option =>
+            option.setName('image')
+                .setDescription('Image à joindre au NDS (optionnel)')
+                .setRequired(false)
+        )
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
     async execute(interaction, client) {
@@ -22,9 +27,10 @@ module.exports = {
 
         const channel = interaction.options.getChannel('salon');
         const role = interaction.options.getString('role');
+        const image = interaction.options.getAttachment('image');
 
         const modal = new ModalBuilder()
-            .setCustomId(`ndspm_modal_${channel.id}_${role}`)
+            .setCustomId(`ndspm_modal_${channel.id}_${role}${image ? '_' + image.url : ''}`)
             .setTitle('📋・Note de Service');
 
         const titleInput = new TextInputBuilder()
