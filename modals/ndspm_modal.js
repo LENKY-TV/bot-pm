@@ -1,4 +1,4 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { responses, saveResponse } = require('../utils/dispatchTracker');
 const { trackNdsMessage } = require('../events/messageCreate');
 const Logger = require('../utils/logger');
@@ -32,15 +32,31 @@ module.exports = {
             }
         } catch (e) {}
 
-        const embed = new EmbedBuilder()
+        // Embed principal avec le texte
+        const mainEmbed = new EmbedBuilder()
             .setTitle(`📋 ・${title}`)
             .setDescription(content)
             .setColor(color)
             .setFooter({ text: '⚠️ Confirmez la lecture sous 48h • Répondez avec une image pour l\'ajouter' })
             .setTimestamp();
 
+        // Premier embed avec la première image
+        const embeds = [];
         if (imageUrls.length > 0) {
-            embed.setImage(imageUrls[0]);
+            const firstImgEmbed = new EmbedBuilder()
+                .setImage(imageUrls[0])
+                .setColor(color);
+            embeds.push(mainEmbed, firstImgEmbed);
+        } else {
+            embeds.push(mainEmbed);
+        }
+
+        // Ajouter les images suivantes dans des embeds séparés
+        for (let i = 1; i < imageUrls.length; i++) {
+            const imgEmbed = new EmbedBuilder()
+                .setImage(imageUrls[i])
+                .setColor(color);
+            embeds.push(imgEmbed);
         }
 
         const row = new ActionRowBuilder().addComponents(
@@ -57,12 +73,7 @@ module.exports = {
                 return interaction.reply({ content: '❌ Salon introuvable.', ephemeral: true });
             }
 
-            // Convertir les URLs en Attachments
-            const files = imageUrls.slice(1).map((url, i) => {
-                return new AttachmentBuilder(url, { name: `image_${i + 2}.png` });
-            });
-
-            const msg = await channel.send({ content: `<@&${roleId}>`, embeds: [embed], components: [row], files });
+            const msg = await channel.send({ content: `<@&${roleId}>`, embeds, components: [row] });
 
             trackNdsMessage(msg.id);
 
